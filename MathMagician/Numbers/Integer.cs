@@ -11,6 +11,7 @@ namespace MathMagician.Numbers
         int GetFirst(); //first number in the sequence of numbers to be printed to screen
         int GetNext(int current); //given the current number, go to the next number
         int[] GetSequence(int how_many);//should give you an array of #'s
-        string printNumbers(int[] how_many);//takes an array of #'s and gives a string
+        string PrintNumbers(int[] how_many);//takes an array of #'s and gives a string
     }
+    //always add your sanity check here- see prev files
 }
