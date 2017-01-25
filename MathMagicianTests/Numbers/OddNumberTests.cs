@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class UnitTest1
+    public class OddNumberTests
     {
         [TestMethod]
         public void TestMethod1()
