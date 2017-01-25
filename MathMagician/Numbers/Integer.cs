@@ -10,7 +10,7 @@ namespace MathMagician.Numbers
     {
         int GetFirst();
         int GetNext(int current);
-        int GetSequence(int how_many);
+        int[] GetSequence(int how_many);
         string printNumbers(int[] how_many);
     }
 }
