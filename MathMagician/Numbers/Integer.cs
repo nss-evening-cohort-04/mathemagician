@@ -8,9 +8,9 @@ namespace MathMagician.Numbers
 {
     interface Integer
     {
-        int GetFirst();
-        int GetNext(int current);
-        int GetSequence(int how_many);
-        string printNumbers(int[] how_many);
+        int GetFirst();// first number in sequence printed to screen
+        int GetNext(int current);// given current num, find a way to calculate next number
+        int[] GetSequence(int how_many);// takes how many items to print, into an array
+        string printNumbers(int[] how_many);// takes int array, prints string
     }
 }
