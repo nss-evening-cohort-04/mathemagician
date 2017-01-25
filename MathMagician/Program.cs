@@ -10,8 +10,8 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What would you like for to do?");
-            Console.WriteLine();
+            Console.WriteLine("What would you like for me to print?");
+            Console.WriteLine("Commands:\r\nIntegers\r\nPrimes\r\nFibonacci\r\nEven\r\nOdd");
             //"How" you provide the user with useful info is on you.
             //Think about, "How will the user pick a command?"
             //Is it better to modify the original question? Make it more useful?
