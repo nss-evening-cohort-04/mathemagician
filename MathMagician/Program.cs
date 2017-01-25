@@ -19,7 +19,7 @@ namespace MathMagician
 
             string howMany = Console.ReadLine();
             //has it been entered as less than 30?
-
+            //if number is greater than 30 how do i exit program?
             Console.WriteLine($"Cool, I am going to print {howMany} {command} numbers.");
 
             //OK print some stuff!
