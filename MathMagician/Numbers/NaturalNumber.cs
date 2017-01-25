@@ -8,9 +8,18 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
+        private int First { get; set; }
+
+        public NaturalNumber()
+        {
+            First = 1;
+            // this.First = 1;
+            // "this" means the current class instance
+        }
+
         public int GetFirst()
         {
-            return 1;
+            return First;
         }
 
         public int GetNext(int current)
