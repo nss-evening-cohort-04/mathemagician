@@ -11,11 +11,11 @@ namespace MathMagician
         static void Main(string[] args)
         {
             Console.WriteLine("What would you like for me to do?");
-            Console.WriteLine(""); //"How" you provide the user useful info is your choice TomBO (you could have them enter a number or enter specific text)
+            Console.WriteLine(""); 
                                    //Think about, 'How will the user pick a command?'
                                    // Is it better to modify the original question? Make it more useful?
 
-            Console.WriteLine("1.Add this later" + Environment.NewLine);
+            Console.WriteLine("1.Add this later" + Environment.NewLine + "2.Add this later" + Environment.NewLine + "3.Add this later" + Environment.NewLine + "4.Add this later" + Environment.NewLine + "5.Add this later" + Environment.NewLine);
 
             string commandz = Console.ReadLine(); //this is "reading" what the user types in
             // saying string commandz is saving 
