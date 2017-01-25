@@ -18,16 +18,16 @@ namespace MathMagician
             Console.WriteLine("1.Add this later" + Environment.NewLine + "2.Add this later" + Environment.NewLine + "3.Add this later" + Environment.NewLine + "4.Add this later" + Environment.NewLine + "5.Add this later" + Environment.NewLine);
 
             string commandz = Console.ReadLine(); //this is "reading" what the user types in
-            // saying string commandz is saving 
-            //the type 'string' as commandz
-            //but how do we know this a valid command?
+                                                  // saying string commandz is saving 
+                                                  //the type 'string' as commandz
+                                                  //but how do we know this a valid command?
 
             Console.WriteLine("How many should I print?");
 
             string how_many = Console.ReadLine();//this is "reading" what the user types in
 
-            //When do I check if the "How many" response is too big?
-            //If they enter a number > 30, how do I respond AND exit the program?
+                                                 //When do I check if the "How many" response is too big?
+                                                 //If they enter a number > 30, how do I respond AND exit the program?
 
             Console.WriteLine($"Cool, I'm going to print {how_many} {commandz} numbers.");
 

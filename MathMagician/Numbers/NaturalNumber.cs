@@ -8,9 +8,16 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer // "public" ='s any code outside the class can access this class
     {
+        private int First { get; set; } // this is an example of a property
+
+        public NaturalNumber() //example of a constructor
+        {
+            First = 1; //this calls the setter
+        }
+
         public int GetFirst()
         {
-            return 1;
+            return First;
         }
 
         public int GetNext(int current)
