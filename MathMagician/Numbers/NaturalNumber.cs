@@ -9,6 +9,7 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         private int First { get; set; }
+        private int[] Sequence { get;  set;}
 
         public NaturalNumber()
         {
@@ -28,7 +29,7 @@ namespace MathMagician.Numbers
 
         public int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+            return Sequence;
         }
 
         public string PrintNumbers(int[] how_many)

@@ -48,6 +48,21 @@ namespace MathMagicianTests.Numbers
 
         }
 
+        [TestMethod]
+        public void EnsureCanGetSequence()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+            int how_many = 3;
+
+            //Act
+            int[] expectedResult = new[] { 1, 2, 3 } ;
+            int[] actualResult = naturalNumber.GetSequence(how_many);
+
+            //Assert
+            CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
 
     }
 }
