@@ -6,24 +6,16 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class NaturalNumber : Integer
+    public class OddNumber : Integer
     {
-        private int First { get; set; }
-
-        public NaturalNumber()
-        {
-            First = 1;
-            //same as this.First = 1;
-        }
-
         public int GetFirst()
         {
-            return First;
+            throw new NotImplementedException();
         }
 
         public int GetNext(int current)
         {
-            return current;
+            throw new NotImplementedException();
         }
 
         public int[] GetSequence(int how_many)

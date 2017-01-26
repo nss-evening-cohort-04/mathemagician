@@ -10,8 +10,8 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What would you like for me to do?");
-            Console.WriteLine(""); //How you provide the user useful info is on you.
+            Console.WriteLine("Command choices: Integer, Prime, Fibonacci, Even or Odd.");
+            Console.WriteLine("Pick a command: "); //How you provide the user useful info is on you.
             //think about, 'How will the user pick a command?'
             //Is it better to modify the original question? Make it more useful?
 
@@ -20,9 +20,12 @@ namespace MathMagician
             //it's a valid command?
 
             //When should you actually create an instance of your number class? now or later?
+
             Console.WriteLine("How many should I print?");
 
             string howMany = Console.ReadLine();
+
+
 
             //When do I check if the "HowMany" response is too big? no more than 30
             //If they inter a number > 30, how do I respond and exit the program?

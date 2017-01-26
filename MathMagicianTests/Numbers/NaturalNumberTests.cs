@@ -30,7 +30,36 @@ namespace MathMagicianTests.Numbers
 
             //Assert (Check the output from your method.)
             Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void EnsureGetNext()
+        {
+            //Arrange
 
+            //Act
+
+            //Assert
+        }
+        [TestMethod]
+        public void EnsureGetSequence()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
+        }
+        [TestMethod]
+        public void EnsurePrintNumbers()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
         }
     }
 }
+//int GetNext(int current);
+//int[] GetSequence(int how_many);
+//string PrintNumbers(int[] how_many);
