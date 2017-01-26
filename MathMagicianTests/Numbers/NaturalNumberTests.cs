@@ -31,5 +31,23 @@ namespace MathMagicianTests.Numbers
             Assert.AreEqual(exepectedResult, actualResult);
 
         }
+
+        [TestMethod]
+        public void EnsureCanGetNextNumber()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+            int current = 4;
+
+            //Act
+            int expectedResult = 5;
+            int actualResult = naturalNumber.GetNext(current);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+
+        }
+
+
     }
 }
