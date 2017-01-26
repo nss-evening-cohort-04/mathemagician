@@ -49,5 +49,36 @@ namespace MathMagicianTests.Numbers
             //Assert (check the output from your method)
             Assert.AreEqual(actualResult, expectedResult);
         }
+
+        [TestMethod]
+        public void EnsureGetSequenceReturnsIntArray()
+        {
+            //Arrange (where you set stuff up)
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            //Act (call the method you're testing)
+            //test only one method at a time
+            int[] actualResult = naturalNumber.GetSequence(10);
+
+
+            //Assert (check the output from your method)
+            Assert.IsInstanceOfType(actualResult, typeof(int[]));
+        }
+
+        [TestMethod]
+        public void EnsurePrintNumbersReturnString()
+        {
+            //Arrange (where you set stuff up)
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            //Act (call the method you're testing)
+            //test only one method at a time
+            int[] sequenceArray = naturalNumber.GetSequence(10);
+            string actualResult = naturalNumber.PrintNumbers(sequenceArray);
+
+
+            //Assert (check the output from your method)
+            Assert.AreEqual(actualResult, "Here Ya Go: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11");
+        }
     }
 }
