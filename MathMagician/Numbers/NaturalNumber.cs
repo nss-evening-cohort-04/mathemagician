@@ -9,6 +9,8 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer // "public" ='s any code outside the class can access this class
     {
         private int First { get; set; } // this is an example of a property
+        private int current { get; set; } // this is an example of a property
+
 
         public NaturalNumber() //example of a constructor
         {
@@ -18,16 +20,20 @@ namespace MathMagician.Numbers
         public int GetFirst()
         {
             return First;
+            //this.First = 1; --> 'this' means the current class instance
+            //the above is the exact same as  return First
         }
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+            //given the current number, go to the next number
+
+            return current + 1;
         }
 
         public int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+            //ex: even sqc {2,4,6,8,10} -- get a sqc to run here
         }
 
         public string PrintNumbers(int[] how_many)

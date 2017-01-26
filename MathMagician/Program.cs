@@ -15,7 +15,7 @@ namespace MathMagician
                                    //Think about, 'How will the user pick a command?'
                                    // Is it better to modify the original question? Make it more useful?
 
-            Console.WriteLine("1.Add this later" + Environment.NewLine + "2.Add this later" + Environment.NewLine + "3.Add this later" + Environment.NewLine + "4.Add this later" + Environment.NewLine + "5.Add this later" + Environment.NewLine);
+            Console.WriteLine("1.Show Natural Numbers" + Environment.NewLine + "2.Show Even Numbers" + Environment.NewLine + "3.Show Odd Numbers" + Environment.NewLine + "4.Show Fibonaci Sequence" + Environment.NewLine);
 
             string commandz = Console.ReadLine(); //this is "reading" what the user types in
                                                   // saying string commandz is saving 

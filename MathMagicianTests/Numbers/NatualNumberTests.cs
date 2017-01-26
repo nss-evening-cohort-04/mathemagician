@@ -32,5 +32,31 @@ namespace MathMagicianTests.Numbers
 
 
         }
+
+        [TestMethod]
+        public void GetNextTestMethod()
+        {
+            //arrange 
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            //act
+            int expectedResult = 2;
+            int actualResult = naturalNumber.GetNext(1);
+
+            //assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void GetSequence()
+        {
+
+            //arrange
+
+            //act
+
+            //assert
+
+        }
     }
 }
