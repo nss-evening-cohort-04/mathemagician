@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Numbers\Integer.cs" />
     <Compile Include="Numbers\NaturalNumber.cs" />
+    <Compile Include="Numbers\OddNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
