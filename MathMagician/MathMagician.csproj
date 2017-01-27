@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Numbers\Even.cs" />
+    <Compile Include="Numbers\FibonacciNumber.cs" />
     <Compile Include="Numbers\Integer.cs" />
     <Compile Include="Numbers\NaturalNumber.cs" />
+    <Compile Include="Numbers\Odd.cs" />
+    <Compile Include="Numbers\PrimeNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
