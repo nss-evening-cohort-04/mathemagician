@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class OddNumberTests
+    public class EvenNumberTests
     {
         //this is a sanity check test
         //Ensures everything is hooked up correctly and
@@ -17,36 +17,36 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void EnsureICanCreateOddNumberInstance()
         {
-            OddNumber oddNumber = new OddNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
-            Assert.IsNotNull(oddNumber);
+            Assert.IsNotNull(evenNumber);
         }
 
         [TestMethod]
-        public void CheckFirstOddNumber()
+        public void CheckFirstEvenNumber()
         {
             //Arrange (where you set stuff up)
-            OddNumber oddNumber = new OddNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int expectedResult = 1;
-            int actualResult = oddNumber.GetFirst();
+            int expectedResult = 2;
+            int actualResult = evenNumber.GetFirst();
 
             //Assert (check the output from your method)
             Assert.AreEqual(actualResult, expectedResult);
         }
 
         [TestMethod]
-        public void GetNextReturnsNextOddNumber()
+        public void GetNextReturnsNextEvenNumber()
         {
             //Arrange (where you set stuff up)
-            OddNumber oddNumber = new OddNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int expectedResult = 11;
-            int actualResult = oddNumber.GetNext(9);
+            int expectedResult = 12;
+            int actualResult = evenNumber.GetNext(10);
 
 
             //Assert (check the output from your method)
@@ -54,14 +54,14 @@ namespace MathMagicianTests.Numbers
         }
 
         [TestMethod]
-        public void GetSequenceReturnsIntArray()
+        public void EvenGetSequenceReturnsIntArray()
         {
             //Arrange (where you set stuff up)
-            OddNumber oddNumber = new OddNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int[] actualResult = oddNumber.GetSequence(10);
+            int[] actualResult = evenNumber.GetSequence(10);
 
 
             //Assert (check the output from your method)
@@ -72,17 +72,18 @@ namespace MathMagicianTests.Numbers
         public void PrintNumberReturnCorrectString()
         {
             //Arrange (where you set stuff up)
-            OddNumber oddNumber = new OddNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int[] sequenceArray = oddNumber.GetSequence(10);
-            string actualResult = oddNumber.PrintNumbers(sequenceArray);
+            int[] sequenceArray = evenNumber.GetSequence(10);
+            string actualResult = evenNumber.PrintNumbers(sequenceArray);
 
 
             //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, "Here Ya Go: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21");
+            Assert.AreEqual(actualResult, "Here Ya Go: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22");
 
         }
     }
+
 }

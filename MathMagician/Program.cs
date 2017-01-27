@@ -49,7 +49,18 @@ namespace MathMagician
                     break;
 
                 case "even":
-                    Console.WriteLine($"Still working on");
+                    EvenNumber even = new EvenNumber();
+                    Console.WriteLine("How many should I print ?");
+                    how_many = int.Parse(Console.ReadLine());
+                    if (how_many > 30)
+                    {
+                        Console.WriteLine($"Oh yeah, keep the number less than or equal to 30...");
+                        Console.ReadKey();
+                    }
+                    Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+                    int[] EvenToPrint = even.GetSequence(how_many);
+                    Console.WriteLine(even.PrintNumbers(EvenToPrint));
+                    Console.WriteLine("press any key to exit...");
                     Console.ReadKey();
                     break;
 
