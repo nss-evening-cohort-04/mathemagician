@@ -9,11 +9,13 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         private int First { get; set; }
+        private int CurrentNumber { get; set; }
 
         public NaturalNumber()
         {
             First = 1;
             // this.First = 1;
+     
         }
 
         public int GetFirst()
@@ -23,17 +25,24 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+            int Next = current + 1;
+            return Next;
         }
 
         public int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+            var numberArray = new int[how_many];
+            for (int i = 0; i < how_many; i++)
+            {
+                numberArray[i] = (GetNext(i)); 
+            }
+            return numberArray;
         }
 
         public string printNumbers(int[] how_many)
         {
-            throw new NotImplementedException();
+            string numberString = String.Join(", ", how_many);
+            return numberString;
         }
     }
 }
