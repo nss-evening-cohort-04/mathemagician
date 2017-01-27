@@ -18,21 +18,22 @@ namespace MathMagician
             //Is it better to modify the original question? Make it more useful?
 
             string command = Console.ReadLine().ToLower();
+            int how_many = 0;
             //Once I have the command(whatever it looks like), how do I check if it's a valid command?
             switch (command)
             {
                 case "integers":
                     NaturalNumber natural = new NaturalNumber();
                     Console.WriteLine("How many should I print ?");
-                    int how_many = int.Parse(Console.ReadLine());
+                    how_many = int.Parse(Console.ReadLine());
                     if(how_many > 30)
                     {
                         Console.WriteLine($"Oh yeah, keep the number less than or equal to 30...");
                         Console.ReadKey();
                     }
                     Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
-                    int[] toPrint = natural.GetSequence(how_many);
-                    Console.WriteLine(natural.PrintNumbers(toPrint));
+                    int[] IntegersToPrint = natural.GetSequence(how_many);
+                    Console.WriteLine(natural.PrintNumbers(IntegersToPrint));
                     Console.WriteLine("press any key to exit...");
                     Console.ReadKey();
                     break;
@@ -53,7 +54,18 @@ namespace MathMagician
                     break;
 
                 case "odd":
-                    Console.WriteLine($"Still working on");
+                    OddNumber odd = new OddNumber();
+                    Console.WriteLine("How many should I print ?");
+                    how_many = int.Parse(Console.ReadLine());
+                    if (how_many > 30)
+                    {
+                        Console.WriteLine($"Oh yeah, keep the number less than or equal to 30...");
+                        Console.ReadKey();
+                    }
+                    Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+                    int[] OddToPrint = odd.GetSequence(how_many);
+                    Console.WriteLine(odd.PrintNumbers(OddToPrint));
+                    Console.WriteLine("press any key to exit...");
                     Console.ReadKey();
                     break;
 
