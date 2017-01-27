@@ -11,10 +11,15 @@ namespace MathMagician.Numbers
         //don't want them to access it outside of the class//
         private int FirstNumber { get; set; }
 
+        private int CurrentNumber { get; set; }
+
+        private int LastNumber { get; set; }
+
         public NaturalNumber()
         {
             FirstNumber = 1;
-            //this.FirstNumber = 1;
+            CurrentNumber = 0;
+            LastNumber = 0;
         }
 
         public int GetFirst()
@@ -24,17 +29,31 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+            current = current + 1;
+            return current;
         }
 
         public int[] GetSequence(int howMany)
         {
-            throw new NotImplementedException();
+            int[] sequenceArray = new int[howMany];
+            int counter = 0;
+            for (int i = 0; i < sequenceArray.Length;  i++)
+            {
+                int numberToPush = GetNext(counter + FirstNumber) - 1;
+                sequenceArray[counter] = numberToPush;
+                counter++;
+            }
+           PrintNumbers(sequenceArray);
+            return null;
         }
 
-        public string PrintNumbers(int[] howMany)
+        public string PrintNumbers(int [] sequenceArray)
         {
-            throw new NotImplementedException();
+            foreach (int number in sequenceArray)
+            {
+                Console.WriteLine(number.ToString());
+            }
+            return null;
         }
     }
 }
