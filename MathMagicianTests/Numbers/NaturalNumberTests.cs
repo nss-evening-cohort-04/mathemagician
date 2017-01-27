@@ -49,14 +49,15 @@ namespace MathMagicianTests.Numbers
         }
 
         [TestMethod]
-        public void EnsureCanGetSequence()
+        public void EnsureCanCreateSequence()
         {
             //Arrange
             NaturalNumber naturalNumber = new NaturalNumber();
-            int how_many = 3;
+            int how_many = 5;
+
 
             //Act
-            int[] expectedResult = new[] { 1, 2, 3 } ;
+            int[] expectedResult = new int [5];
             int[] actualResult = naturalNumber.GetSequence(how_many);
 
             //Assert

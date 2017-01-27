@@ -29,7 +29,10 @@ namespace MathMagician.Numbers
 
         public int[] GetSequence(int how_many)
         {
-            return Sequence;
+            for ( int i = First; i < how_many; i++)
+            {
+                Sequence[i]
+            }
         }
 
         public string PrintNumbers(int[] how_many)
