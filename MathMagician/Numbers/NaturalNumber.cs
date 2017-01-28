@@ -8,6 +8,13 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
+        private int first { get; set; }
+
+        public NaturalNumber()
+        {
+            first = 1;
+        }
+
         public int GetFirst()
         {
             return 1;
