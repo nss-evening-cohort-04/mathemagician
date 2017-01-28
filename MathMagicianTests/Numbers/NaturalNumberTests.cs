@@ -28,5 +28,33 @@ namespace MathMagicianTests.Numbers
             //Assert (check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
+        public void EnsureNextNumberIsCorrect()
+        {
+            // Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            // Act
+            int NextNumber = naturalNumber.GetNext(3);
+
+            // Assert
+            Assert.AreEqual(4, NextNumber);
+        }
+
+        [TestMethod]
+        public void EnsureASequenceOfNumbers()
+        {
+            // Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            // Act 
+            int[] SequenceOfNumbers = naturalNumber.GetSequence(5);
+            int[] ExpectedSequence = new int[] { 1, 2, 3, 4, 5 };
+
+            // Assert
+            Assert.AreEqual(ExpectedSequence.Length, SequenceOfNumbers.Length);
+            
+        }
     }
 }
