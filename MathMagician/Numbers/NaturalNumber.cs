@@ -48,9 +48,6 @@ namespace MathMagician.Numbers
             return String.Join(" ", number_array);
         }
 
-        public int GetNext()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
