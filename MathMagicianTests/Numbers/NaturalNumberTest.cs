@@ -31,17 +31,50 @@ namespace MathMagicianTests.Numbers
 
         }
         [TestMethod]
-        public void EnsureNextCurrent(int current)
+        public void EnsureICanGetNext()
         {
             //Arrange
-            NaturalNumber currentNumber = new NaturalNumber();
+            NaturalNumber naturalNumber = new NaturalNumber();
+
             //Act
-            int expectedResult = 2;
-            int actualResult = currentNumber.GetNext();
+            int expectedResult = 4;
+            int actualResult = naturalNumber.GetNext(3);
+
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
-            
+
         }
 
+        [TestMethod]
+        public void EnsureICanGetSequence()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            //Act
+            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int [] actualResult = naturalNumber.GetSequence(10);
+
+            //Assert
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+           
+        }
+
+        [TestMethod]
+        public void EnsureICanPrintSequence()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            //Act
+            string expectedResult = "1 2 3 4 5";
+            int[] inputArray = new[] { 1, 2, 3, 4, 5 };
+            string actualResult = naturalNumber.PrintNumbers(inputArray);
+            //string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+
+        }
     }
 }

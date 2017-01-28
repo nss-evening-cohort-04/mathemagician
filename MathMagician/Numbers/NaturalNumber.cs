@@ -8,7 +8,6 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int currentNumber;
 
         public int First { get; set; }
        
@@ -23,17 +22,33 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext()
+        public int GetNext(int current)
         {
-            return currentNumber;
+            //'current' argument is read only
+
+            return current + 1;
         }
 
         public int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+            int[] numbers = new int[how_many];
+
+            numbers[0] = GetFirst();
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                numbers[i] = GetNext(numbers[i-1]);
+            }
+  
+            return numbers;
         }
 
-        public string PrintNumbers(int[] how_many)
+        public string PrintNumbers(int[] number_array)
+        {
+            return String.Join(" ", number_array);
+        }
+
+        public int GetNext()
         {
             throw new NotImplementedException();
         }
