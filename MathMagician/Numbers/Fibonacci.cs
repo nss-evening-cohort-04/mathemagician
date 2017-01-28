@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    interface Integer
+    class Class1
     {
-        int GetFirst();
-        int GetNext(int current);
-        int GetSequence(int how_many);
-        string printNumbers(int[] how_many);
     }
 }
