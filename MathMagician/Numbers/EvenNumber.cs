@@ -8,14 +8,20 @@ namespace MathMagician.Numbers
 {
     public class EvenNumber : Integer
     {
+        private int First { get; set; }
+
+        public EvenNumber()
+        {
+            First = 2;
+        }
         public int GetFirst()
         {
-            throw new NotImplementedException();
+            return First;
         }
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+            return current + 2;
         }
 
         public int[] GetSequence(int how_many)

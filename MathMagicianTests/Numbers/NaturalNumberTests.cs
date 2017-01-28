@@ -33,15 +33,15 @@ namespace MathMagicianTests.Numbers
             Assert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod]
-        public void EnsureGetNext()
+        public void EnsureCanGetNext()
         {
             //int GetNext(int current);
             //Arrange
             NaturalNumber naturalNumber = new NaturalNumber();
 
             //Act
-            int expectedResult = 1;
-            int actualResult = naturalNumber.GetNext(20);
+            int expectedResult = 4;
+            int actualResult = naturalNumber.GetNext(3);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -54,11 +54,12 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             //Act
-            int[] expectedResult = new int[] { 10,15,20 };
+            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int[] actualResult = naturalNumber.GetSequence(10);
 
             //Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod]
         public void EnsurePrintNumbers()
@@ -68,11 +69,11 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             //Act
-            int[] expectedResult = new int[] { 10, 20, 30 };
-            //int[] actualResult = naturalNumber.PrintNumbers(10);
+            string expectedResult = "1 2 3 4 5";
+            string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
 
             //Assert
-            //Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
