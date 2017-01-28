@@ -10,8 +10,8 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            NaturalNumber naturalNumber = new NaturalNumber();
-            Assert.IsNotNull(naturalNumber);
+            EvenNumber evenNumber = new EvenNumber();
+            Assert.IsNotNull(evenNumber);
         }
 
 
