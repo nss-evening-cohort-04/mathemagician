@@ -14,7 +14,7 @@ namespace MathMagician
 
             // Ask the user how they feel
             Console.WriteLine("What kind of numbers should I print for you:");
-            Console.WriteLine("Natural, Prime, Fibonacci, Even or Odd");
+            Console.WriteLine("Options: Natural, Prime, Fibonacci, Even or Odd");
 
             // capture their response in a variable
             string command = Console.ReadLine();
@@ -35,14 +35,15 @@ namespace MathMagician
                     goto HowManyNumbersToPrint;
 
                 // if number is valid
-                    // call the proper function for the type of number they want and ...
-                    goto Finish;
+                // call the proper function for the type of number they want and ...
+                int[] values = Enumerable.Range(start, end - start).ToArray();
+                goto Finish;
             Finish:
 
                 // write the result to the console
                 Console.WriteLine($"You asked me to print { howMany } numbers that are { command }.  Here { listOfNumbers }");
 
-                // prgram will quit when ...
+                // program will quit when ...
                 Console.WriteLine("Press any key to quit.");
                 Console.ReadKey();
             }

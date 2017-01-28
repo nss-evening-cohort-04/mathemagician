@@ -6,28 +6,70 @@ namespace MathMagicianTests.Numbers
 {
     [TestClass]
     public class NaturalNumberTests
-    {
-        // This ensures everything is hooked up
-        // AND that the permissions are correct
+    {   
         [TestMethod]
-        public void EnsureICanCreatInstance()
+        public void EnsureICanCreateInstance()
         {
             NaturalNumber naturalNumber = new NaturalNumber();
+
             Assert.IsNotNull(naturalNumber);
         }
 
         [TestMethod]
-        public void EnsureOneIsTheFirstNumber()
+        public void EnsureOneIsTheFirst()
         {
-            // Arrange (where you set stuff up)
+            // Arrange
             NaturalNumber naturalNumber = new NaturalNumber();
 
-            // Act (where you call the method you are testing)
+            // Act
             int expectedResult = 1;
             int actualResult = naturalNumber.GetFirst();
 
-            // Assert (check the output from your method)
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
+        public void EnsureNextNumber()
+        {
+            // Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+           
+            // Act 
+            int expectedResult = 2 + 1;
+            int actualResult = naturalNumber.GetNext(2);
+            
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void EnsureSequenceIsWorking()
+        {
+            // Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+            
+            // Act
+            int[] expectedResult = new int[] { 1, 2, 3, 4, 5 };
+            int[] actualResult = naturalNumber.GetSequence(5);
+            
+            // Assert (Check thte output from your method)
+            CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void EnsurePrintNumbersIsWorking()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+            
+            //Act 
+            string expectedResult = "1 2 3 4 5";
+            string actualResult = naturalNumber.PrintNumbers(naturalNumber.GetSequence(5));
+            
+            // Assert (Check thte output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }

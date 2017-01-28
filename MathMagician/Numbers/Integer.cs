@@ -11,6 +11,6 @@ namespace MathMagician.Numbers
         int GetFirst();
         int GetNext(int current);
         int[] GetSequence(int howMany);
-        string printNumbers(int[] howMany);
+        string PrintNumbers(int[] howMany);
     }
 }
