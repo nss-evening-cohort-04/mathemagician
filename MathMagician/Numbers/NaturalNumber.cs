@@ -24,9 +24,7 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-
             return current += 1;
-
         }
 
         public int[] GetSequence(int how_many)
@@ -73,6 +71,8 @@ namespace MathMagician.Numbers
             string PrintString = RemoveLastComma.Remove(lastCommaIndex, toRemove.Length);
 
             return PrintString;
+            //or
+            //return String.Join(" ", number_array);
         }
     }
 }

@@ -80,6 +80,8 @@ namespace MathMagicianTests.Numbers
 
             //Assert (check the output from your method)
             Assert.AreEqual(actualResult, "Here Ya Go: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11");
+            //use CollectionAssert instead
+            //CollectionAsert.AreEqual(expectedResult, actualResult);
         }
     }
 }

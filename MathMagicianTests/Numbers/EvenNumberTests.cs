@@ -56,16 +56,17 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void EvenGetSequenceReturnsIntArray()
         {
-            //Arrange (where you set stuff up)
+            // Arrange
             EvenNumber evenNumber = new EvenNumber();
 
-            //Act (call the method you're testing)
-            //test only one method at a time
+            // Act
+            int[] expectedResult = {2,4,6,8,10,12,14,16,18,20};
+            //int myNum; this is zero "0"
             int[] actualResult = evenNumber.GetSequence(10);
 
-
-            //Assert (check the output from your method)
-            Assert.IsInstanceOfType(actualResult, typeof(int[]));
+            // Assert
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
@@ -81,7 +82,7 @@ namespace MathMagicianTests.Numbers
 
 
             //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, "Here Ya Go: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22");
+            Assert.AreEqual(actualResult, "2 4 6 8 10 12 14 16 18 20");
 
         }
     }
