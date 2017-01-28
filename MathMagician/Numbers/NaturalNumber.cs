@@ -29,17 +29,35 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+            int Next = current + 1;
+            return Next;
         }
 
         public int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+            List<int> NumbersToPrint = new List<int>();
+            while (Current <= how_many)
+            {
+                NumbersToPrint.Add(Current);
+                GetNext(Current);
+                Current += 1;
+            }
+            return NumbersToPrint.ToArray();
         }
 
         public string PrintNumbers(int[] how_many)
         {
-            throw new NotImplementedException();
+            string Print = "|";
+            foreach(var number in how_many)
+            {
+                Print += number.ToString() + "|";
+            }
+            Console.WriteLine(Print);
+
+            Console.WriteLine("Press anykey to exit...");
+
+            Console.ReadKey();
+            return Print;
         }
     }
 }
