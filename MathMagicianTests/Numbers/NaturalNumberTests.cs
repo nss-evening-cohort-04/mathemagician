@@ -45,10 +45,32 @@ namespace MathMagicianTests.Numbers
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        //[TestMethod]
-        ////public void En()
-        //{
+        [TestMethod]
+        public void EnsureICanGetSequence()
+        {
+            // Arrange (Where you set stuff up)
+            NaturalNumber naturalNumber = new NaturalNumber();
 
-        //}
+            // Act (Call the method you're testing)
+            int[] expectedResult = { 1, 2, 3, 4, 5 };
+            int[] actualResult = naturalNumber.GetSequence(5);
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+        }
+
+        [TestMethod]
+        public void EnsureICanPrintSequence()
+        {
+            // Arrange (Where you set stuff up)
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            // Act (Call the method you're testing)
+            string expectedResult = "1, 2, 3, 4, 5";
+            string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
