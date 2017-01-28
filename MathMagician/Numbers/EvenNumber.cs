@@ -6,39 +6,38 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class EvenNumber : Integer
+    public class EvenNumber : NaturalNumber
     {
-        private int First { get; set; }
 
         public EvenNumber()
         {
             First = 2;
         }
-        public int GetFirst()
+        public override int GetFirst()
         {
             return First;
         }
 
-        public int GetNext(int current)
+       public override int GetNext(int current)
         {
             return current += 2;
         }
 
-        public int[] GetSequence(int how_many)
-        {
-            int[] numbers = new int[how_many];
-            numbers[0] = GetFirst(); // i = 2
-            for (int i = 1; i < numbers.Length; i++)
-            {
-                numbers[i] = GetNext(numbers[i - 1]);
-            }
+        //public int[] GetSequence(int how_many)
+        //{
+        //    int[] numbers = new int[how_many];
+        //    numbers[0] = GetFirst(); // i = 2
+        //    for (int i = 1; i < numbers.Length; i++)
+        //    {
+        //        numbers[i] = GetNext(numbers[i - 1]);
+        //    }
 
-            return numbers;
-        }
+        //    return numbers;
+        //}
 
-        public string PrintNumbers(int[] number_array)
-        {
-            return String.Join(" ", number_array);
-        }
+        //public string PrintNumbers(int[] number_array)
+        //{
+        //    return String.Join(" ", number_array);
+        //}
     }
 }
