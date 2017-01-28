@@ -32,15 +32,19 @@ namespace MathMagician
             {
             HowManyNumbersToPrint:
                 // logic to determine how many numbers to print
-                // if number is invalid
-                // write error and ...
+
+                int numberToPrint = Int32.Parse(howMany);
+                if (numberToPrint <= 30 && numberToPrint >= 1)
+                {
+                    // call the appropriate Number Class to print the numbers to the console
+                    string listOfNumbers = "";
+                    goto Finish;
+                } else
+                {
+                    Console.WriteLine("Try again, please select a number between 1 and 30.");
+                }
                 goto HowManyNumbersToPrint;
 
-                // if number is valid
-                // call the proper function for the type of number they want and ...
-                // int[] values = Enumerable.Range(start, end - start).ToArray();
-                string listOfNumbers = "";
-                goto Finish;
             Finish:
 
                 // write the result to the console
@@ -52,7 +56,7 @@ namespace MathMagician
             }
             else
             {
-                Console.WriteLine("Try again, please write something I can understand");
+                Console.WriteLine("Try again, please choose an option I suggested.");
             }
         }
     }
