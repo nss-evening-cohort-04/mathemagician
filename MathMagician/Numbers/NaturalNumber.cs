@@ -30,7 +30,7 @@ namespace MathMagician.Numbers
             return current + Step;
         }
 
-        public int[] GetSequence(int how_many)
+        virtual public int[] GetSequence(int how_many)
         {
             int[] numbers = new int[how_many];
 

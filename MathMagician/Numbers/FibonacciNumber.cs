@@ -8,7 +8,30 @@ namespace MathMagician.Numbers
 {
     public class FibonacciNumber : NaturalNumber
     {
-        //Could hold 1, 1, 2, 3, 5, 8, .....
-        private int[] BaseSequence { get; set;  }
+        private int[] BaseSequence { get; set; }
+    
+
+        public FibonacciNumber()
+        {
+            First = 1;
+            Step = 1;
+        }
+        public override int GetNext(int current)
+        {
+            return current;
+        }
+        public override int[] GetSequence(int how_many)
+        {
+            int[] fibNums = new int[how_many];
+
+            fibNums[0] = GetFirst();
+
+            for (int i = 1; i < fibNums.Length; i++)
+            {
+                fibNums[i] = GetNext(fibNums[i - 1]);
+            }
+
+            return fibNums;
+        }
     }
 }
