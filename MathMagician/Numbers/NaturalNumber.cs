@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
 
-        public int First { get; set; }
-       
+        protected int First { get; set; }
+        protected int Step { get; set; }
+
 
         public NaturalNumber()
         {
             First = 1;
+            Step = 2;
         }
 
         public int GetFirst()
@@ -22,7 +23,7 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext(int current)
+        virtual public int GetNext(int current)
         {
             //'current' argument is read only
 
