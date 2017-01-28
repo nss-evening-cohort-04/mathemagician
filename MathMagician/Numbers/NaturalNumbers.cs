@@ -18,17 +18,22 @@ namespace MathMagician.Numbers
 
         public int GetFirst()
         {
-           return 1;
+           return First;
         }
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+            return current + 1;
         }
 
         public int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+            int[] sequence = { };
+            for (int i = 1; i < how_many; i++)
+            {
+                sequence[i - 1] = i;
+            }
+            return sequence;
         }
 
         public string printNumbers(int[] how_many)
