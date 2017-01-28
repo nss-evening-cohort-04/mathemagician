@@ -9,7 +9,7 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         // FYI EVENS & ODDS ARE ALSO NATURAL NUMBERS SO THEY CAN INHERIT FROM THIS
-        public int First { get; set; }
+        public virtual int First { get; set; }
 
         public NaturalNumber()
         {
@@ -18,18 +18,18 @@ namespace MathMagician.Numbers
             
         }
         
-        public int GetFirst()
+        public virtual int GetFirst()
         {
             return First;
         }
 
-        public int GetNext(int current)
+        public virtual int GetNext(int current)
         {
             //'current' is readonly so it can't be modified
             return current + 1;
         }
 
-        public int[] GetSequence(int howMany)
+        public virtual int[] GetSequence(int howMany)
         {
             int[] numbers = new int[howMany];
             numbers[0] = GetFirst();
@@ -43,7 +43,7 @@ namespace MathMagician.Numbers
             
         }
 
-        public string PrintNumbers(int[] numberArray)
+        public virtual string PrintNumbers(int[] numberArray)
         {
             return string.Join(" ", numberArray);
         }
