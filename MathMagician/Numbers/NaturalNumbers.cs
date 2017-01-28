@@ -28,17 +28,21 @@ namespace MathMagician.Numbers
 
         public int[] GetSequence(int how_many)
         {
-            int[] sequence = { };
-            for (int i = 1; i < how_many; i++)
+            int[] numbers = new int[how_many];
+            numbers[0] = GetFirst();
+
+            for (int i = 1; i < numbers.Length; i++)
             {
-                sequence[i - 1] = i;
+                numbers[i] = GetNext(numbers[i-1]);
             }
-            return sequence;
+            return numbers;
         }
 
-        public string printNumbers(int[] how_many)
+        public string printNumbers(int[] number_array)
         {
-            throw new NotImplementedException();
+            return String.Join(", ", number_array);
         }
+
+        
     }
 }

@@ -53,12 +53,29 @@ namespace MathMagicianTests.Numbers
             NaturalNumbers naturalNumber = new NaturalNumbers();
             int []how_many = { 1, 2, 3, 4 };
             //Act (call method you are testing)
-            int[] expectedResult = { 1, 2, 3, 4 };
-            int[] actualResult = naturalNumber.GetSequence(3);
+            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] actualResult = naturalNumber.GetSequence(10);
 
 
             //Assert (check output)
             CollectionAssert.AreEqual(expectedResult, actualResult);
         }
-    }
+
+        [TestMethod]
+        public void EnsureCanPrintNumbers()
+        {
+            //Arrange (set stuff up)
+            NaturalNumbers naturalNumber = new NaturalNumbers();
+            
+            //Act (call method you are testing)
+            string expectedResult = "1, 2, 3, 4, 5";
+            int[] inputArray = new[] { 1,2,3,4,5 };
+            string actualResult = naturalNumber.printNumbers(inputArray);
+
+
+            //Assert (check output)
+            Assert.AreEqual(expectedResult, actualResult);
+
+            }
+        }
 }
