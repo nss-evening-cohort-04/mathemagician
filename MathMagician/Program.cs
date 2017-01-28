@@ -34,7 +34,7 @@ namespace MathMagician
 
                 if (formattedCommand == 1)
                 {
-                    Console.WriteLine($"Cool, I'm going to print {numVal} integers.");
+                    Console.WriteLine($"Cool, I'm going to print {numVal} natural integers.");
 
                     NaturalNumber naturalNumber = new NaturalNumber();
 
