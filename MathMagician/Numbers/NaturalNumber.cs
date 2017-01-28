@@ -14,6 +14,7 @@ namespace MathMagician.Numbers
         {
             First = 1;
             // same as this.First = 1;
+
         }
 
         public int GetFirst()
@@ -23,7 +24,9 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
+
             return current += 1;
+
         }
 
         public int[] GetSequence(int how_many)

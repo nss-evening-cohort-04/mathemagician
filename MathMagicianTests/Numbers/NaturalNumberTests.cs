@@ -7,6 +7,7 @@ namespace MathMagicianTests.Numbers
     [TestClass]
     public class NaturalNumberTests
     {
+
         //this is a sanity check test
         //Ensures everything is hooked up correctly and
         //that the permissions are correct.
