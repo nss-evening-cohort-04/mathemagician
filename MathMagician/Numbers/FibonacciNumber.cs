@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    interface Integer
+    class FibonacciNumber
     {
-        int GetFirst();
-        int GetNext(int current);
-        int[] GetSequence(int howMany);
-        string printNumbers(int[] howMany);
     }
 }
