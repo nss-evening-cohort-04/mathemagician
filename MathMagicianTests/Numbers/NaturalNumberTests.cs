@@ -7,12 +7,11 @@ namespace MathMagicianTests.Numbers
     [TestClass]
     public class NaturalNumberTests
     {
-
-        //this is a sanity check test
-        //Ensures everything is hooked up correctly and
-        //that the permissions are correct.
+        // This is a sanity Check test.
+        // Ensures everything is hooked up correctly AND
+        // that the permissions are correct.
         [TestMethod]
-        public void EnsureICanCreateNaturalNumberInstance()
+        public void EnsureICanCreateInstance()
         {
             NaturalNumber naturalNumber = new NaturalNumber();
 
@@ -22,66 +21,63 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void EnsureOneIsTheFirstNumber()
         {
-            //Arrange (where you set stuff up)
+            // Arrange (Where you set stuff up)
             NaturalNumber naturalNumber = new NaturalNumber();
 
-            //Act (call the method you're testing)
-            //test only one method at a time
+            // Act (Call the method you're testing)
             int expectedResult = 1;
             int actualResult = naturalNumber.GetFirst();
 
-            //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, expectedResult);
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
+
+        [TestMethod]
+        public void EnsureICanGetNext()
+        {
+            // Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            // Act
+            int expectedResult = 7;
+            //int myNum; this is zero "0"
+            int actualResult = naturalNumber.GetNext(6);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-        public void EnsureGetNextReturnsCurrentPlusOne()
+        public void EnsureICanGetSequence()
         {
-            //Arrange (where you set stuff up)
+            // Arrange
             NaturalNumber naturalNumber = new NaturalNumber();
 
-            //Act (call the method you're testing)
-            //test only one method at a time
-            int expectedResult = 11;
-            int actualResult = naturalNumber.GetNext(10);
-            
-
-            //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, expectedResult);
-        }
-
-        [TestMethod]
-        public void EnsureGetSequenceReturnsIntArray()
-        {
-            //Arrange (where you set stuff up)
-            NaturalNumber naturalNumber = new NaturalNumber();
-
-            //Act (call the method you're testing)
-            //test only one method at a time
+            // Act
+            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int myNum; this is zero "0"
             int[] actualResult = naturalNumber.GetSequence(10);
 
-
-            //Assert (check the output from your method)
-            Assert.IsInstanceOfType(actualResult, typeof(int[]));
+            // Assert
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-        public void EnsurePrintNumbersReturnString()
+        public void EnsureICanPrintSequence()
         {
-            //Arrange (where you set stuff up)
+            // Arrange
             NaturalNumber naturalNumber = new NaturalNumber();
 
-            //Act (call the method you're testing)
-            //test only one method at a time
-            int[] sequenceArray = naturalNumber.GetSequence(10);
-            string actualResult = naturalNumber.PrintNumbers(sequenceArray);
+            // Act
+            string expectedResult = "1 2 3 4 5";
+            int[] inputArray = new[] { 1, 2, 3, 4, 5 };
+            string actualResult = naturalNumber.PrintNumbers(inputArray);
+            //string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
 
-
-            //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, "Here Ya Go: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11");
-            //use CollectionAssert instead
-            //CollectionAsert.AreEqual(expectedResult, actualResult);
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
