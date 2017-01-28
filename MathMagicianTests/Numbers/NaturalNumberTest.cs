@@ -30,5 +30,18 @@ namespace MathMagicianTests.Numbers
             Assert.AreEqual(expectedResult, actualResult);
 
         }
+        [TestMethod]
+        public void EnsureNextCurrent(int current)
+        {
+            //Arrange
+            NaturalNumber currentNumber = new NaturalNumber();
+            //Act
+            int expectedResult = 2;
+            int actualResult = currentNumber.GetNext();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+            
+        }
+
     }
 }

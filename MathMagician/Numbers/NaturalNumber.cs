@@ -8,12 +8,14 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int First { get; set; }
+        private int currentNumber;
+
+        public int First { get; set; }
+       
 
         public NaturalNumber()
         {
             First = 1;
-            //this.First = 1;
         }
 
         public int GetFirst()
@@ -21,9 +23,9 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext(int current)
+        public int GetNext()
         {
-            throw new NotImplementedException();
+            return currentNumber;
         }
 
         public int[] GetSequence(int how_many)
