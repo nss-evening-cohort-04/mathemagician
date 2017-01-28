@@ -6,20 +6,8 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class EvenNumber : NaturalNumber
+    public class OddNumber : NaturalNumber
     {
-        private int First { get; set; }
-
-        public EvenNumber()
-        {
-            First = 2;
-        }
-
-        public override int GetFirst()
-        {
-            return First;
-        }
-
         public override int GetNext(int current)
         {
             return current + 2;
@@ -27,12 +15,12 @@ namespace MathMagician.Numbers
 
         public override int[] GetSequence(int how_many)
         {
-          
             var numberArray = new int[how_many];
-            for (int i = 1; i <= how_many; i++)
+            numberArray[0] = GetFirst();
+            for (int i = 1; i < how_many; i++)
             {
-               
-                numberArray[i-1] = i * 2;
+
+                numberArray[i] = (i * 2) + 1;
             }
             return numberArray;
         }

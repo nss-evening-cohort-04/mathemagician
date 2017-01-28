@@ -63,13 +63,13 @@ namespace MathMagicianTests.Numbers
         }
 
         [TestMethod]
-        public void CheckSequencePrintMethod()
+        public void CheckPrintNumbersMethod()
         {
             // Arrange
             NaturalNumber naturalNumber = new NaturalNumber();
 
             // Act
-            string expectedResult = "1, 2, 3";
+            string expectedResult = "1 2 3";
             string actualResult = naturalNumber.printNumbers(naturalNumber.GetSequence(3));
 
             // Assert

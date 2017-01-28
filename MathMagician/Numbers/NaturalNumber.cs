@@ -24,8 +24,7 @@ namespace MathMagician.Numbers
 
         public virtual int GetNext(int current)
         {
-            int Next = current + 1;
-            return Next;
+            return current + 1;
         }
 
         public virtual int[] GetSequence(int how_many)
@@ -40,8 +39,7 @@ namespace MathMagician.Numbers
 
         public virtual string printNumbers(int[] how_many)
         {
-            string numberString = String.Join(", ", how_many);
-            return numberString;
+            return String.Join(" ", how_many);
         }
     }
 }

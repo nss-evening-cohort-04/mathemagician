@@ -49,7 +49,7 @@ namespace MathMagicianTests.Numbers
             EvenNumber evenNumber = new EvenNumber();
 
             // Act
-            int[] expectedResult = new int[] {2, 4, 6};
+            int[] expectedResult = new int [] {2, 4, 6};
             int[] actualResult = evenNumber.GetSequence(3);
 
             // Assert
@@ -63,7 +63,7 @@ namespace MathMagicianTests.Numbers
             EvenNumber evenNumber = new EvenNumber();
 
             // Act
-            string expectedResult = "2, 4, 6";
+            string expectedResult = "2 4 6";
             string actualResult = evenNumber.printNumbers(evenNumber.GetSequence(3));
 
             // Assert
