@@ -29,11 +29,23 @@ namespace MathMagician
             // When do I check if the "How Many" response is too big?
             // If they enter a number > 30, how do I respond AND exit the program?
 
-            Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+            int numVal = Int32.Parse(how_many);
 
-            Console.WriteLine("Press anykey to exit...");
+            if (!(numVal > 30))
+            {
+                Console.WriteLine($"Cool, I'm going to print {numVal} {command} numbers.");
 
-            Console.ReadKey();
+                NaturalNumber naturalNumber = new NaturalNumber();
+
+                var sequenceToPrint = naturalNumber.GetSequence(numVal);
+
+                naturalNumber.PrintNumbers(sequenceToPrint);
+            } else
+            {
+                Console.WriteLine("Enter a number less than 30.");
+                Console.WriteLine("Press anykey to exit...");
+                Console.ReadKey();
+            }
         }
     }
 }
