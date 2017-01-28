@@ -8,9 +8,16 @@ namespace MathMagician.Numbers
 {
     public class EvenNumber : Integer
     {
+        private int First { get; set; }
+
+        public EvenNumber()
+        {
+            First = 2;
+            //this.First = 2;
+        }
         public int GetFirst()
         {
-            throw new NotImplementedException();
+            return 2;
         }
 
         public int GetNext(int current)

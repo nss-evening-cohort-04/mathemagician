@@ -1,4 +1,5 @@
 ﻿using System;
+using MathMagician.Numbers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MathMagicianTests.Numbers
@@ -7,22 +8,22 @@ namespace MathMagicianTests.Numbers
     public class EvenNumberTest
     {
         [TestMethod]
-        public void EnsureICanCreatInstance()
+        public void EnsureICanCreatInstanceEven()
         {
-            EvenNumber naturalNumber = new EvenNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
-            Assert.IsNotNull(naturalNumber);
+            Assert.IsNotNull(evenNumber);
         }
 
         [TestMethod]
         public void EnsureTwoIsTheFirstNumber()
         {
             //Arrange (set stuff up)
-            NaturalNumbers naturalNumber = new EvenNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call method you are testing)
-            int expectedResult = 1;
-            int actualResult = naturalNumber.GetFirst();
+            int expectedResult = 2;
+            int actualResult = evenNumber.GetFirst();
 
 
             //Assert (check output)
