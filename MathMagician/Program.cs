@@ -36,6 +36,9 @@ namespace MathMagician
                 else if (command == 2)
                 {
                     typeSelected = "even";
+                    Console.WriteLine($"Cool, I am going to print {howMany} {typeSelected} numbers.");
+                    EvenNumber evenNumber = new EvenNumber();
+                    evenNumber.GetSequence(howMany);
                 }
                 else if (command == 3)
                 {
