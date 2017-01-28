@@ -10,11 +10,16 @@ namespace MathMagician.Numbers
     {
         private int First { get; set; }
 
+        private int Current { get; set; }
+
+        private int Next { get; set; }
+
+        private int HowMany { get; set; }
+
         public NaturalNumber()
         {
             First = 1;
-            // this.First = 1;
-            // "this" means the current class instance
+            Current = 1;
         }
 
         public int GetFirst()
