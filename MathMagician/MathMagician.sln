@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathMagician", "MathMagician.csproj", "{CFDAE680-95DC-4819-8970-18921E89881C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathMagicianTests", "..\MathMagicianTests\MathMagicianTests.csproj", "{15DB6C63-A48E-4F30-BF19-CC8AD3E381F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathMagicianTestsUnit1", "..\MathMagicianTests\MathMagicianTestsUnit1.csproj", "{15DB6C63-A48E-4F30-BF19-CC8AD3E381F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
