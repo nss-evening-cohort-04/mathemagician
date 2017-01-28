@@ -1,65 +1,67 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using MathMagician.Numbers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class NaturalNumberTests
+    public class EvenNumberTests
     {
-
         //this is a sanity check test
         //Ensures everything is hooked up correctly and
         //that the permissions are correct.
         [TestMethod]
-        public void EnsureICanCreateNaturalNumberInstance()
+        public void EnsureICanCreateOddNumberInstance()
         {
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
-            Assert.IsNotNull(naturalNumber);
+            Assert.IsNotNull(evenNumber);
         }
 
         [TestMethod]
-        public void EnsureOneIsTheFirstNumber()
+        public void CheckFirstEvenNumber()
         {
             //Arrange (where you set stuff up)
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int expectedResult = 1;
-            int actualResult = naturalNumber.GetFirst();
-
-            //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, expectedResult);
-
-        }
-
-        [TestMethod]
-        public void EnsureGetNextReturnsCurrentPlusOne()
-        {
-            //Arrange (where you set stuff up)
-            NaturalNumber naturalNumber = new NaturalNumber();
-
-            //Act (call the method you're testing)
-            //test only one method at a time
-            int expectedResult = 11;
-            int actualResult = naturalNumber.GetNext(10);
-            
+            int expectedResult = 2;
+            int actualResult = evenNumber.GetFirst();
 
             //Assert (check the output from your method)
             Assert.AreEqual(actualResult, expectedResult);
         }
 
         [TestMethod]
-        public void EnsureGetSequenceReturnsIntArray()
+        public void GetNextReturnsNextEvenNumber()
         {
             //Arrange (where you set stuff up)
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int[] actualResult = naturalNumber.GetSequence(10);
+            int expectedResult = 12;
+            int actualResult = evenNumber.GetNext(10);
+
+
+            //Assert (check the output from your method)
+            Assert.AreEqual(actualResult, expectedResult);
+        }
+
+        [TestMethod]
+        public void EvenGetSequenceReturnsIntArray()
+        {
+            //Arrange (where you set stuff up)
+            EvenNumber evenNumber = new EvenNumber();
+
+            //Act (call the method you're testing)
+            //test only one method at a time
+            int[] actualResult = evenNumber.GetSequence(10);
 
 
             //Assert (check the output from your method)
@@ -67,19 +69,21 @@ namespace MathMagicianTests.Numbers
         }
 
         [TestMethod]
-        public void EnsurePrintNumbersReturnString()
+        public void PrintNumberReturnCorrectString()
         {
             //Arrange (where you set stuff up)
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int[] sequenceArray = naturalNumber.GetSequence(10);
-            string actualResult = naturalNumber.PrintNumbers(sequenceArray);
+            int[] sequenceArray = evenNumber.GetSequence(10);
+            string actualResult = evenNumber.PrintNumbers(sequenceArray);
 
 
             //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, "Here Ya Go: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11");
+            Assert.AreEqual(actualResult, "Here Ya Go: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22");
+
         }
     }
+
 }
