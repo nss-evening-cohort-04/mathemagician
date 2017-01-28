@@ -41,6 +41,7 @@ namespace MathMagicianTests.Numbers
             
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
+
         }
 
         [TestMethod]
@@ -52,8 +53,9 @@ namespace MathMagicianTests.Numbers
             // Act
             int[] expectedResult = new int[] { 1, 2, 3, 4, 5 };
             int[] actualResult = naturalNumber.GetSequence(5);
-            
-            // Assert (Check thte output from your method)
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
             CollectionAssert.AreEqual(expectedResult, actualResult);
         }
 

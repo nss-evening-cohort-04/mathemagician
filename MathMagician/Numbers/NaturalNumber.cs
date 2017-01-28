@@ -8,31 +8,40 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int first { get; set; }
+        private int First { get; set; }
 
         public NaturalNumber()
         {
-            first = 1;
+            First = 1;
         }
 
         public int GetFirst()
         {
-            return 1;
+            return First;
         }
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+            return current + 1;
         }
 
         public int[] GetSequence(int howMany)
         {
-            throw new NotImplementedException();
+            int[] numbers = new int[howMany];
+
+            numbers[0] = GetFirst();
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                numbers[i] = GetNext(numbers[i - 1]);
+            }
+
+            return numbers;
         }
 
-        public string printNumbers(int[] howMany)
+        public string PrintNumbers(int[] numberArray)
         {
-            throw new NotImplementedException();
+            return String.Join(" ", numberArray);
         }
     }
 }
