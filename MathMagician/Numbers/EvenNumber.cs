@@ -6,20 +6,14 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class NaturalNumber : Integer
+    public class EvenNumber : Integer
     {
         private int First { get; set; }
 
-        // One approach is to use a list to hold calculated numbers
-        //private List<int> sequence { get; set; }
-
-
-        public NaturalNumber()
+        public EvenNumber()
         {
-            First = 1;
-            // this.First = 1;
+            First = 2;
         }
-
         public int GetFirst()
         {
             return First;
@@ -27,15 +21,13 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            // 'current' argument is read-only
-            return current + 1;
-
+            return current += 2;
         }
 
         public int[] GetSequence(int how_many)
         {
             int[] numbers = new int[how_many];
-            numbers[0] = GetFirst(); // i = 1
+            numbers[0] = GetFirst(); // i = 2
             for (int i = 1; i < numbers.Length; i++)
             {
                 numbers[i] = GetNext(numbers[i - 1]);
@@ -50,4 +42,3 @@ namespace MathMagician.Numbers
         }
     }
 }
-
