@@ -37,7 +37,7 @@ namespace MathMagicianTests.Numbers
 
             //Act
             int expectedResult = 4;
-            int actualResult = evenNumber.GetNext(3);
+            int actualResult = evenNumber.GetNext(2);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -50,8 +50,8 @@ namespace MathMagicianTests.Numbers
             EvenNumber evenNumber = new EvenNumber();
 
             //Act
-            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int[] actualResult = evenNumber.GetSequence(10);
+            int[] expectedResult = { 2, 4, 6, 8, 10, 12, 14 };
+            int[] actualResult = evenNumber.GetSequence(7);
 
             //Assert
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
@@ -65,8 +65,8 @@ namespace MathMagicianTests.Numbers
             EvenNumber evenNumber = new EvenNumber();
 
             //Act
-            string expectedResult = "1 2 3 4 5";
-            string actualResult = evenNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
+            string expectedResult = "2 4 6 8 10 12 14";
+            string actualResult = evenNumber.PrintNumbers(new[] { 2, 4, 6, 8, 10, 12, 14 });
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);

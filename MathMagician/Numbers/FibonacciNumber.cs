@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class FibonacciNumber : Integer
+    public class FibonacciNumber : NaturalNumber
     {
+        //could hold 1, 1, 2, 3, 5, 8, 13, 21, 34...
+        private int[] BaseSequence { get; set; }
+
         public int GetFirst()
         {
             throw new NotImplementedException();

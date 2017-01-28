@@ -8,11 +8,13 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int First { get; set; }
+        protected int First { get; set; }
+        protected int Step { get; set;  }
 
         public NaturalNumber()
         {
             First = 1;
+            Step = 1;
             //same as this.First = 1;
         }
 
@@ -21,10 +23,10 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext(int current)
+        virtual public int GetNext(int current)
         {
             //'current' argument is read-only
-            return current + 1;
+            return current + Step;
         }
 
         public int[] GetSequence(int how_many)
