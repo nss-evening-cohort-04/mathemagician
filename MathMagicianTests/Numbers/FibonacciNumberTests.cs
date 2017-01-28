@@ -5,25 +5,25 @@ using MathMagician.Numbers;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class NaturalNumberTests
+    public class FibonacciNumberTests
     {   
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            NaturalNumber naturalNumber = new NaturalNumber();
+            FibonacciNumber fibonacciNumber = new FibonacciNumber();
 
-            Assert.IsNotNull(naturalNumber);
+            Assert.IsNotNull(fibonacciNumber);
         }
 
         [TestMethod]
         public void EnsureOneIsTheFirst()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            FibonacciNumber fibonacciNumber = new FibonacciNumber();
 
             // Act
             int expectedResult = 1;
-            int actualResult = naturalNumber.GetFirst();
+            int actualResult = fibonacciNumber.GetFirst();
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -33,11 +33,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureNextNumber()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber fibonacciNumber = new EvenNumber();
            
             // Act 
-            int expectedResult = 2 + 1;
-            int actualResult = naturalNumber.GetNext(2);
+            int expectedResult = 2 + 2;
+            int actualResult = fibonacciNumber.GetNext(2);
             
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -48,11 +48,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureSequenceIsWorking()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            FibonacciNumber fibonacciNumber = new FibonacciNumber();
             
             // Act
-            int[] expectedResult = new int[] { 1, 2, 3, 4, 5 };
-            int[] actualResult = naturalNumber.GetSequence(5);
+            int[] expectedResult = new int[] { 1, 1, 2, 3, 5 };
+            int[] actualResult = fibonacciNumber.GetSequence(5);
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
@@ -63,11 +63,11 @@ namespace MathMagicianTests.Numbers
         public void EnsurePrintNumbersIsWorking()
         {
             //Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            FibonacciNumber fibonacciNumber = new FibonacciNumber();
             
             //Act 
-            string expectedResult = "1 2 3 4 5";
-            string actualResult = naturalNumber.PrintNumbers(naturalNumber.GetSequence(5));
+            string expectedResult = "1 1 2 3 5";
+            string actualResult = fibonacciNumber.PrintNumbers(fibonacciNumber.GetSequence(5));
             
             // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);

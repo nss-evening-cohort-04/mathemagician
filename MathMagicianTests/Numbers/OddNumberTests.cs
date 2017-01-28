@@ -5,25 +5,25 @@ using MathMagician.Numbers;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class NaturalNumberTests
+    public class OddNumberTests
     {   
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            NaturalNumber naturalNumber = new NaturalNumber();
+            OddNumber oddNumber = new OddNumber();
 
-            Assert.IsNotNull(naturalNumber);
+            Assert.IsNotNull(oddNumber);
         }
 
         [TestMethod]
-        public void EnsureOneIsTheFirst()
+        public void EnsureTwoIsTheFirst()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            OddNumber oddNumber = new OddNumber();
 
             // Act
             int expectedResult = 1;
-            int actualResult = naturalNumber.GetFirst();
+            int actualResult = oddNumber.GetFirst();
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -33,11 +33,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureNextNumber()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            OddNumber oddNumber = new OddNumber();
            
             // Act 
-            int expectedResult = 2 + 1;
-            int actualResult = naturalNumber.GetNext(2);
+            int expectedResult = 1 + 2;
+            int actualResult = oddNumber.GetNext(1);
             
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -48,11 +48,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureSequenceIsWorking()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            OddNumber oddNumber = new OddNumber();
             
             // Act
-            int[] expectedResult = new int[] { 1, 2, 3, 4, 5 };
-            int[] actualResult = naturalNumber.GetSequence(5);
+            int[] expectedResult = new int[] { 1, 3, 5, 7, 9 };
+            int[] actualResult = oddNumber.GetSequence(5);
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
@@ -63,11 +63,11 @@ namespace MathMagicianTests.Numbers
         public void EnsurePrintNumbersIsWorking()
         {
             //Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            OddNumber evenNumber = new OddNumber();
             
             //Act 
-            string expectedResult = "1 2 3 4 5";
-            string actualResult = naturalNumber.PrintNumbers(naturalNumber.GetSequence(5));
+            string expectedResult = "1 3 5 7 9";
+            string actualResult = evenNumber.PrintNumbers(evenNumber.GetSequence(5));
             
             // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);

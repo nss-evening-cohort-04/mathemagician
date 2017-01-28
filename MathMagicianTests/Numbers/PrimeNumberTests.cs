@@ -5,39 +5,40 @@ using MathMagician.Numbers;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class NaturalNumberTests
+    public class PrimeNumberTests
     {   
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            NaturalNumber naturalNumber = new NaturalNumber();
+            PrimeNumber primeNumber = new PrimeNumber();
 
-            Assert.IsNotNull(naturalNumber);
+            Assert.IsNotNull(primeNumber);
         }
 
         [TestMethod]
-        public void EnsureOneIsTheFirst()
+        public void EnsureTwoIsTheFirst()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            PrimeNumber primeNumber = new PrimeNumber();
 
             // Act
-            int expectedResult = 1;
-            int actualResult = naturalNumber.GetFirst();
+            int expectedResult = 2;
+            int actualResult = primeNumber.GetFirst();
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+// code not finished from here down 1/28 @1:47pm
         [TestMethod]
         public void EnsureNextNumber()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            PrimeNumber primeNumber = new PrimeNumber();
            
             // Act 
-            int expectedResult = 2 + 1;
-            int actualResult = naturalNumber.GetNext(2);
+            int expectedResult = 3;
+            int actualResult = primeNumber.GetNext(2);
             
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -48,11 +49,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureSequenceIsWorking()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            PrimeNumber primeNumber = new PrimeNumber();
             
             // Act
-            int[] expectedResult = new int[] { 1, 2, 3, 4, 5 };
-            int[] actualResult = naturalNumber.GetSequence(5);
+            int[] expectedResult = new int[] { 2, 4, 6, 8, 10 };
+            int[] actualResult = primeNumber.GetSequence(5);
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
@@ -63,11 +64,11 @@ namespace MathMagicianTests.Numbers
         public void EnsurePrintNumbersIsWorking()
         {
             //Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            PrimeNumber primeNumber = new PrimeNumber();
             
             //Act 
-            string expectedResult = "1 2 3 4 5";
-            string actualResult = naturalNumber.PrintNumbers(naturalNumber.GetSequence(5));
+            string expectedResult = "2 4 6 8 10";
+            string actualResult = primeNumber.PrintNumbers(primeNumber.GetSequence(5));
             
             // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);
