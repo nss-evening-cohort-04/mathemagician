@@ -25,17 +25,27 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
+            //'current' is readonly so it can't be modified
             return current + 1;
         }
 
         public int[] GetSequence(int howMany)
         {
-            return howMany[];
+            int[] numbers = new int[howMany];
+            numbers[0] = GetFirst();
+
+            for(int i = 1; i < numbers.Length; i++)
+            {
+                numbers[i] = GetNext(numbers[i - 1]);
+            }
+
+            return numbers;
+            
         }
 
-        public string printNumbers(int[] howMany)
+        public string PrintNumbers(int[] numberArray)
         {
-            throw new NotImplementedException();
+            return string.Join(" ", numberArray);
         }
     }
 }
