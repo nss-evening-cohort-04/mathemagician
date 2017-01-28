@@ -8,22 +8,9 @@ namespace MathMagician.Numbers
 {
     public class Odd : NaturalNumber
     {
-        private int First { get; set; }
-
         public Odd()
         {
-            First = 1;
+            Step = 2;
         }
-
-        public override int GetFirst()
-        {
-            return First;
-        }
-
-        public override int GetNext(int current)
-        {
-            return current + 2;
-        }
-
     }
 }

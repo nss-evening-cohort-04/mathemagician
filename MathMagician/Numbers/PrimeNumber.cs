@@ -8,16 +8,9 @@ namespace MathMagician.Numbers
 {
     public class PrimeNumber : NaturalNumber
     {
-        private int First { get; set; }
-
         public PrimeNumber()
         {
             First = 2;
-        }
-
-        public override int GetFirst()
-        {
-            return First;
         }
 
         public override int GetNext(int current)
