@@ -55,12 +55,26 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             //Act (Call the method you are testing)
-            int [] expectedResult = new int[] { 1, 2 };
-            int [] actualResult = naturalNumber.GetSequence(2);
+            int[] expectedResult = { 1, 2, 3 };
+            int[] actualResult = naturalNumber.GetSequence(3);
 
             //Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
             CollectionAssert.AreEqual(expectedResult, actualResult);
 
+        }
+
+        [TestMethod]
+        public void ENsureICanPrintSequence()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            //Act
+            string expectedResult = "1 2 3 4 5";
+            string actualResult = naturalNumber.PrintNumbers(new int[] { 1, 2, 3, 4, 5 });
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }

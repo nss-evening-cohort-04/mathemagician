@@ -13,13 +13,10 @@ namespace MathMagician.Numbers
 
         private int CurrentNumber { get; set; }
 
-        private int LastNumber { get; set; }
-
         public NaturalNumber()
         {
             FirstNumber = 1;
             CurrentNumber = 0;
-            LastNumber = 0;
         }
 
         public int GetFirst()
@@ -29,31 +26,24 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            current = current + 1;
-            return current;
+            return current += 1;
         }
 
         public int[] GetSequence(int howMany)
         {
-            int[] sequenceArray = new int[howMany];
-            int counter = 0;
-            for (int i = 0; i < sequenceArray.Length;  i++)
+            int[] numbers = new int[howMany];
+            numbers[0] = GetFirst();
+            for (int i = 1; i < numbers.Length; i++)
             {
-                int numberToPush = GetNext(counter + FirstNumber) - 1;
-                sequenceArray[counter] = numberToPush;
-                counter++;
+                numbers[i] = GetNext(numbers[i-1]);
+
             }
-           PrintNumbers(sequenceArray);
-            return null;
+            return numbers;
         }
 
-        public string PrintNumbers(int [] sequenceArray)
+        public string PrintNumbers(int [] number_array)
         {
-            foreach (int number in sequenceArray)
-            {
-                Console.WriteLine(number.ToString());
-            }
-            return null;
+            return string.Join(" ", number_array);
         }
     }
 }

@@ -18,7 +18,6 @@ namespace MathMagician.Numbers
         public EvenNumber()
         {
             FirstNumber = 2;
-            CurrentNumber = 0;
         }
 
         public int GetFirst()
@@ -28,22 +27,18 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            CurrentNumber = current + 2;
-            return current;
+            return current + 2;
         }
 
         public int[] GetSequence(int howMany)
         {
-            int[] sequenceArray = new int[howMany];
-            int counter = 0;
-            for (int i = 0; i < sequenceArray.Length; i++)
+            int[] number_array = new int[howMany];
+            number_array[0] = GetFirst();
+            for (int i = 1; i < number_array.Length; i++)
             {
-                int numberToPush = GetNext(CurrentNumber) + 2;
-                sequenceArray[counter] = numberToPush;
-                counter++;
+                number_array[i] = GetNext(number_array[i-1]);
             }
-            PrintNumbers(sequenceArray);
-            return null;
+            return number_array;
         }
 
         public string PrintNumbers(int[] sequenceArray)

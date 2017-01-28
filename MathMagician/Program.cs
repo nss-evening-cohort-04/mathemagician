@@ -31,14 +31,16 @@ namespace MathMagician
                     typeSelected = "natural";
                     Console.WriteLine($"Cool, I am going to print {howMany} {typeSelected} numbers.");
                     NaturalNumber naturalNumber = new NaturalNumber();
-                    naturalNumber.GetSequence(howMany);
+                    int [] arrayToPrint = naturalNumber.GetSequence(howMany);
+                    Console.WriteLine(naturalNumber.PrintNumbers(arrayToPrint));
                 }
                 else if (command == 2)
                 {
                     typeSelected = "even";
                     Console.WriteLine($"Cool, I am going to print {howMany} {typeSelected} numbers.");
                     EvenNumber evenNumber = new EvenNumber();
-                    evenNumber.GetSequence(howMany);
+                    int[] arrayToPrint = evenNumber.GetSequence(howMany);
+                    Console.WriteLine(evenNumber.PrintNumbers(arrayToPrint));
                 }
                 else if (command == 3)
                 {
