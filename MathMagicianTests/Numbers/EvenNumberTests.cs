@@ -8,7 +8,16 @@ namespace MathMagicianTests.Numbers
     public class EvenNumberTests
     {
         [TestMethod]
-        public void EnsureFirstEven()
+        public void EnsureICanCreateEven()
+        {
+            EvenNumber evenNumber = new EvenNumber();
+
+            Assert.IsNotNull(evenNumber);
+        }
+
+
+        [TestMethod]
+        public void EnsureTwoIsFirstNumber()
         {
             //Arrange (where you set stuff up)
             EvenNumber evenNumber = new EvenNumber();
@@ -42,12 +51,27 @@ namespace MathMagicianTests.Numbers
             EvenNumber evenNumber = new EvenNumber();
 
             // Act 
-            int[] actualResult = evenNumber.GetSequence(5);
             int[] expectedResult = new int[] { 2, 4, 6, 8, 10 };
+            int[] actualResult = evenNumber.GetSequence(5);
 
             // Assert
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
             CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void EnsureICanPrintEvenSequence()
+        {
+            // Arrange
+            EvenNumber evenNumber = new EvenNumber();
+
+            // Act
+            string expectedResult = "2 4 6 8 10";
+            int[] inputArray = new[] { 2, 4, 6, 8, 10 };
+            string actualResult = evenNumber.PrintNumbers(inputArray);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }

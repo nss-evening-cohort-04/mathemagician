@@ -9,12 +9,14 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         // FYI EVENS & ODDS ARE ALSO NATURAL NUMBERS SO THEY CAN INHERIT FROM THIS
-        public virtual int First { get; set; }
+        protected virtual int First { get; set; }
+        protected int Step { get; set; }
 
         public NaturalNumber()
         {
             First = 1;
             //this.First=1;
+            Step = 1; // defined by how much to increment to next item
             
         }
         
@@ -26,7 +28,7 @@ namespace MathMagician.Numbers
         public virtual int GetNext(int current)
         {
             //'current' is readonly so it can't be modified
-            return current + 1;
+            return current + Step;
         }
 
         public virtual int[] GetSequence(int howMany)
