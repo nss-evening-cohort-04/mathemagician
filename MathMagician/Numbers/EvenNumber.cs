@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    class EvenNumber
+    public class EvenNumber : NaturalNumber
     {
+        public EvenNumber()
+        {
+            First = 2;
+            Step = 2;
+        }
+
     }
 }

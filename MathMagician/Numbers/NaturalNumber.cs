@@ -8,15 +8,17 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int First { get; set; }
+        protected int First { get; set; }
+        protected int Step { get; set; }
 
         // One approach is to use a list to hold calculated numbers
         //private List<int> sequence { get; set; }
-         
+
 
         public NaturalNumber()
         {
             First = 1;
+            Step = 1;
             // this.First = 1;
         }
 
@@ -25,10 +27,10 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext(int current)
+        virtual public int GetNext(int current)
         {
             // 'current' argument is read-only
-            return current + 1;
+            return current + Step;
 
         }
 
