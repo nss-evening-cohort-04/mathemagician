@@ -40,8 +40,8 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             //act
-            int expectedResult = 2;
-            int actualResult = naturalNumber.GetNext(1);
+            int expectedResult = 4;
+            int actualResult = naturalNumber.GetNext(3);
 
             //assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -50,13 +50,33 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void GetSequence()
         {
-
             //arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
 
             //act
+            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] actualResult = naturalNumber.GetSequence(10);
 
             //assert
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
 
+        [TestMethod]
+        public void Printumberz()
+        {
+            //arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            //act
+            string expectedResult = "1 2 3 4 5";
+            int[] inputArray = new[] { 1, 2, 3, 4, 5 };
+            string actualResult = naturalNumber.PrintNumbers(inputArray);
+            //string actualResult = naturalNumber.PrintNumbers(new [] { 1, 2, 3, 4, 5 }); aother way of doing things
+
+            //assert
+            Assert.AreEqual(expectedResult, actualResult);
+            
         }
     }
 }
