@@ -26,48 +26,19 @@ namespace MathMagician.Numbers
 
         public int[] GetSequence(int how_many)
         {
-            //create an Array or List
-            List<int> sequenceList = new List<int>();
-            //start with GetFirst 
-            //Array.push(NaturalNumber.GetFirst());
-            sequenceList.Add(GetFirst());
-
-            //initialize current int to GetFirst number
-            int current = GetFirst();
-            //int current = NaturalNumber.GetFirst();
-
-            //iterate according to how_many
-            for (var i = 0; i < how_many; i++)
+            int[] numbers = new int[how_many];
+            numbers[0] = GetFirst(); // i = 2
+            for (int i = 1; i < numbers.Length; i++)
             {
-                //Get the next number in the sequence by calling the class method GetNext
-                int Next = GetNext(current);
-                //Array.push(NaturalNumber.GetNext(int current));
-                sequenceList.Add(Next);
-                //assign previous number to current int variable
-                //current = 
-                current = Next;
+                numbers[i] = GetNext(numbers[i - 1]);
             }
 
-            int[] printArray = sequenceList.ToArray();
-
-            return printArray;
+            return numbers;
         }
 
-        public string PrintNumbers(int[] ToPrint)
+        public string PrintNumbers(int[] number_array)
         {
-            StringBuilder sb = new StringBuilder("Here Ya Go: ");
-
-            foreach (int val in ToPrint)
-            {
-                sb.Append(val + ", ");
-            }
-
-            string RemoveLastComma = sb.ToString();
-            int lastCommaIndex = RemoveLastComma.LastIndexOf(",");
-            string toRemove = ", ";
-            string PrintString = RemoveLastComma.Remove(lastCommaIndex, toRemove.Length);
-
-            return PrintString;
+            return String.Join(" ", number_array);
         }
     }
 }

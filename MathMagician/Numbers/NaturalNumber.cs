@@ -72,7 +72,7 @@ namespace MathMagician.Numbers
 
             return PrintString;
             //or
-            //return String.join(" ", number_array);
+            //return String.Join(" ", number_array);
         }
     }
 }
