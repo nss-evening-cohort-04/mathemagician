@@ -59,5 +59,18 @@ namespace MathMagicianTests.Numbers
             CollectionAssert.Equals(expectedResult, actualResult);
         }
 
+        [TestMethod]
+        public void EnsurePrintNumbersWork()
+        {
+            // Arrange (Where you set stuff up)
+           FibonacciNumber fibonacciNumber = new FibonacciNumber();
+
+            // Act (Call the method you're testing)
+            string expectedResult = "1 1 2";
+            string actualResult =fibonacciNumber.PrintNumbers(fibonacciNumber.GetSequence(3));
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

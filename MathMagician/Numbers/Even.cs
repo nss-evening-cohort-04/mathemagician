@@ -25,14 +25,5 @@ namespace MathMagician.Numbers
             return current + 2;
         }
 
-        public override int[] GetSequence(int how_many)
-        {
-            int[] evenNums = new int[how_many];
-            for (int i = 1; i <= how_many; i++)
-            {
-                evenNums[i - 1] = i * 2;
-            }
-            return evenNums;
-        }
     }
 }

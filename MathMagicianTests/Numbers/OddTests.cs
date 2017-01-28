@@ -59,5 +59,18 @@ namespace MathMagicianTests.Numbers
             CollectionAssert.Equals(expectedResult, actualResult);
         }
 
+        [TestMethod]
+        public void EnsurePrintNumbersWork()
+        {
+            // Arrange (Where you set stuff up)
+            Odd odd = new Odd();
+
+            // Act (Call the method you're testing)
+            string expectedResult = "1 3 5";
+            string actualResult = odd.PrintNumbers(odd.GetSequence(3));
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

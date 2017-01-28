@@ -29,9 +29,10 @@ namespace MathMagician.Numbers
         public virtual int[] GetSequence(int how_many)
         {
             int[] naturalNums = new int[how_many];
-            for (int i = 1; i <= how_many; i++)
+            naturalNums[0] = GetFirst();
+            for (int i = 1; i < how_many; i++)
             {
-                naturalNums[i - 1] = i;
+                naturalNums[i] = GetNext(naturalNums[i - 1]);
             }
             return naturalNums;
         }

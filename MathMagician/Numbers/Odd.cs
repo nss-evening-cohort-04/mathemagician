@@ -25,14 +25,5 @@ namespace MathMagician.Numbers
             return current + 2;
         }
 
-        public override int[] GetSequence(int how_many)
-        {
-            int[] oddNums = new int[how_many];
-            for (int i = 1; i <= how_many; i++)
-            {
-                oddNums[i - 1] = i * 2 - 1;
-            }
-            return oddNums;
-        }
     }
 }

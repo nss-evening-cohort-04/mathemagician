@@ -41,15 +41,5 @@ namespace MathMagician.Numbers
             return next;
         }
 
-        public override int[] GetSequence(int how_many)
-        {
-            int[] primeNums = new int[how_many];
-            primeNums[0] = 2;
-            for (int i = 1; i < how_many; i++)
-            {
-                primeNums[i] = GetNext(primeNums[i - 1]);
-            }
-            return primeNums;
-        }
     }
 }

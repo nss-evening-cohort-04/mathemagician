@@ -59,5 +59,18 @@ namespace MathMagicianTests.Numbers
             CollectionAssert.Equals(expectedResult, actualResult);
         }
 
+        [TestMethod]
+        public void EnsurePrintNumbersWork()
+        {
+            // Arrange (Where you set stuff up)
+            PrimeNumber primeNumber = new PrimeNumber();
+
+            // Act (Call the method you're testing)
+            string expectedResult = "2 3 5";
+            string actualResult = primeNumber.PrintNumbers(primeNumber.GetSequence(3));
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

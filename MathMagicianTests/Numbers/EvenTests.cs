@@ -59,6 +59,20 @@ namespace MathMagicianTests.Numbers
             CollectionAssert.Equals(expectedResult, actualResult);
         }
 
+        [TestMethod]
+        public void EnsurePrintNumbersWork()
+        {
+            // Arrange (Where you set stuff up)
+            Even even = new Even();
+
+            // Act (Call the method you're testing)
+            string expectedResult = "2 4 6";
+            string actualResult = even.PrintNumbers(even.GetSequence(3));
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }
 
