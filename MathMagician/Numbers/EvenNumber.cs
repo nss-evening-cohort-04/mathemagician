@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    class Class1
+    public class EvenNumber : Integer
     {
+        public int GetFirst()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetNext(int current)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int[] GetSequence(int how_many)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string printNumbers(int[] how_many)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
