@@ -5,17 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 namespace MathMagician.Numbers
 {
-    public class NaturalNumber : Integer
+    public class EvenNumber : Integer
     {
 
-        protected int First { get; set; }
-        protected int Step { get; set; }
+        public int First { get; set; }
 
-
-        public NaturalNumber()
+        public EvenNumber()
         {
-            First = 1;
-            Step = 1;
+            First = 2;
         }
 
         public int GetFirst()
@@ -23,11 +20,11 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        virtual public int GetNext(int current)
+        public int GetNext(int current)
         {
             //'current' argument is read only
 
-            return current + Step;
+            return current + 2;
         }
 
         public int[] GetSequence(int how_many)
@@ -38,9 +35,9 @@ namespace MathMagician.Numbers
 
             for (int i = 1; i < numbers.Length; i++)
             {
-                numbers[i] = GetNext(numbers[i-1]);
+                numbers[i] = GetNext(numbers[i - 1]);
             }
-  
+
             return numbers;
         }
 
@@ -48,7 +45,5 @@ namespace MathMagician.Numbers
         {
             return String.Join(" ", number_array);
         }
-
-        
     }
 }
