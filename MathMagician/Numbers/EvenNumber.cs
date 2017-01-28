@@ -34,7 +34,7 @@ namespace MathMagician.Numbers
             for (int i = 1; i <= how_many; i++)
             {
                
-                numberArray[i-1] = i*2;
+                numberArray[i-1] = i * 2;
             }
             return numberArray;
         }
