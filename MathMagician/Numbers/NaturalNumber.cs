@@ -13,7 +13,6 @@ namespace MathMagician.Numbers
         // One approach is to use a list to hold calculated numbers
         //private List<int> sequence { get; set; }
 
-
         public NaturalNumber()
         {
             First = 1;
@@ -38,7 +37,9 @@ namespace MathMagician.Numbers
             numbers[0] = GetFirst(); // i = 1
             for (int i = 1; i < numbers.Length; i++)
             {
+
                 numbers[i] = GetNext(numbers[i - 1]);
+
             }
 
             return numbers;

@@ -55,7 +55,9 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             // Act
+
             int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
             //int myNum; this is zero "0"
             int[] actualResult = naturalNumber.GetSequence(10);
 
