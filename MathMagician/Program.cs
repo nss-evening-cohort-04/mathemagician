@@ -12,19 +12,21 @@ namespace MathMagician
         {
             string[] numberChoices = new string[] { "even", "odd", "natural", "prime", "fibonacci" };
 
-            // Ask the user how they feel
+            // Ask the user what kind of number to print
             Console.WriteLine("What kind of numbers should I print for you:");
             Console.WriteLine("Options: Natural, Prime, Fibonacci, Even or Odd");
 
             // capture their response in a variable
             string command = Console.ReadLine();
 
-            // Ask the user how many hours they slept last night
+            // Ask the user how many numbers of ^ type to print
             Console.WriteLine("How many numbers do you want me to print?");
             Console.WriteLine("Listen: this console isn't very big, I can only print up to 30 numbers.");
 
             // capture their response in a variable
             string howMany = Console.ReadLine();
+
+// code not finished from here down 1/28 @1:47pm
 
             if (numberChoices.Contains(command.ToLower()))
             {
