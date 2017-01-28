@@ -17,6 +17,7 @@ namespace MathMagicianTests.Numbers
 
         // This is a sanity check test - ensures everything is hooking up correctly AND
         // that the permissions are correct. 
+        // you should have 5 tests - each method and a descriptive name for this
         [TestMethod]
         public void EnsureOneIsTheFirstNumber()
         {
@@ -36,7 +37,41 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
             // Act
             int expectedResult = 4;
-            int actualResult = NaturalNumber.GetNext(3);
+            //in myNum; this is zero 0
+
+            // it doesn't matter what numbers you use; you are 
+            int actualResult = naturalNumber.GetNext(3);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
+        public void EnsureICanGetSequence()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+            // Act
+            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //in myNum; this is zero 0
+
+            // it doesn't matter what numbers you use; you are 
+            int[] actualResult = naturalNumber.GetSequence(10);
+
+            // Assert
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+        }
+        [TestMethod]
+        public void EnsureICanPrintSequence()
+        {
+            //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            // Act
+            string expectedResult = "1 2 3 4 5";
+            int[] inputArray = new[] { 1, 2, 3, 4, 5 };
+            string actualResult = naturalNumber.PrintNumbers(inputArray);
+            //string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
+
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
