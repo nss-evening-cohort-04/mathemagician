@@ -13,26 +13,33 @@ namespace MathMagician.Numbers
         public NaturalNumber()
         {
             first = 1;
+            // this.first = 1;
         }
 
-        public int GetFirst()
+        public virtual int GetFirst()
         {
             return first;
         }
 
-        public int GetNext(int current)
+        public virtual int GetNext(int current)
         {
-            throw new NotImplementedException();
+            return current + 1;
         }
 
-        public int[] GetSequence(int how_many)
+        public virtual int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+            int[] numbers = new int[how_many];
+            numbers[0] = GetFirst();
+            for (int x = 1; x < how_many; x++)
+            {
+                numbers[x] = GetNext(numbers[x-1]);
+            }
+            return numbers;
         }
 
         public string PrintNumbers(int[] how_many)
         {
-            throw new NotImplementedException();
+            return String.Join(" ", how_many); ;
         }
     }
 }

@@ -5,7 +5,7 @@ using MathMagician.Numbers;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class NaturalNumberTests
+    public class EvenNumberTests
     {
         // This is a sanity Check test.
         // Ensures everything is hooked up correctly AND
@@ -13,20 +13,20 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
-            Assert.IsNotNull(naturalNumber);
+            Assert.IsNotNull(evenNumber);
         }
 
         [TestMethod]
         public void EnsureOneIsTheFirstNumber()
         {
             // Arrange (Where you set stuff up
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             // Act (Call the method you're testing)
-            int expectedResult = 1;
-            int actualResult = naturalNumber.GetFirst();
+            int expectedResult = 2;
+            int actualResult = evenNumber.GetFirst();
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);
@@ -36,11 +36,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureNextNumberIsTwo()
         {
             // Arrange (Where you set stuff up
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             // Act (Call the method you're testing)
-            int expectedResult = 2;
-            int actualResult = naturalNumber.GetNext(naturalNumber.GetFirst());
+            int expectedResult = 4;
+            int actualResult = evenNumber.GetNext(evenNumber.GetFirst());
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);
@@ -50,11 +50,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureICanGetNext()
         {
             // Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act
-            int expectedResult = 4;
-            int actualResult = naturalNumber.GetNext(3);
+            int expectedResult = 8;
+            int actualResult = evenNumber.GetNext(6);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -65,11 +65,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureSequenceOfFive()
         {
             // Arrange (Where you set stuff up
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             // Act (Call the method you're testing)
-            int[] expectedResult = { 1, 2, 3, 4, 5 };
-            int[] actualResult = naturalNumber.GetSequence(5);
+            int[] expectedResult = { 2, 4, 6, 8, 10 };
+            int[] actualResult = evenNumber.GetSequence(5);
 
             // Assert (Check the output from your method)
             CollectionAssert.AreEqual(expectedResult, actualResult);
@@ -79,11 +79,11 @@ namespace MathMagicianTests.Numbers
         public void EnsureSequenceOfTwenty()
         {
             // Arrange (Where you set stuff up
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             // Act (Call the method you're testing)
-            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-            int[] actualResult = naturalNumber.GetSequence(20);
+            int[] expectedResult = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40 };
+            int[] actualResult = evenNumber.GetSequence(20);
 
             // Assert (Check the output from your method)
             CollectionAssert.AreEqual(expectedResult, actualResult);
@@ -93,11 +93,12 @@ namespace MathMagicianTests.Numbers
         public void EnsureNumbersArePrinted()
         {
             //Arrange
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
             //Act
-            string expectedResult = "1 2 3 4 5";
-            string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
+            string expectedResult = "2 4 6 8 10";
+            int[] sequence = evenNumber.GetSequence(5);
+            string actualResult = evenNumber.PrintNumbers(sequence);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
