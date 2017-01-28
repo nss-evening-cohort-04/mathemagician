@@ -22,7 +22,7 @@ namespace MathMagician.Numbers
 
         public override int GetNext(int current)
         {
-            int Next = current * 2;
+            int Next = current + 2;
             return Next;
 
         }
@@ -33,7 +33,8 @@ namespace MathMagician.Numbers
             var numberArray = new int[how_many];
             for (int i = 1; i <= how_many; i++)
             {
-                numberArray[i-1] = (GetNext(i));
+               
+                numberArray[i-1] = i*2;
             }
             return numberArray;
         }
