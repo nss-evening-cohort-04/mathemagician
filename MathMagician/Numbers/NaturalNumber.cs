@@ -31,17 +31,17 @@ namespace MathMagician.Numbers //because it is inside the Numbers folder, the na
 
         public int[] GetSequence(int First)
         {
-            while (First <= final_how_many)
-            {
-                First = First + 1;
-            }
+           // while (First <= final_how_many)
+            //{
+              //  First = First + 1;
+            //}
             throw new NotImplementedException();
         }
 
         public string PrintNumbers(int[] how_many)
         {
-            var NaturalNumberList = Enumerable.Range(1, final_how_many).ToList;
-            throw new NotImplementedException();
+            //var NaturalNumberList = Enumerable.Range(1, final_how_many).ToList;
+            //throw new NotImplementedException();
         }
     }
 }

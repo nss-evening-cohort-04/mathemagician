@@ -30,9 +30,15 @@ namespace MathMagicianTests.Numbers
             // Assert (check the method's output)
             Assert.AreEqual(expectedResult, actualResult);
         }
-        public void EnsureTheListIsValid()
+        public void EnsureICanGetNext()
         {
-            Assert.AreEqual(NaturalNumberList, EnsureTheListIsValid);
+            // Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
+            // Act
+            int expectedResult = 4;
+            int actualResult = NaturalNumber.GetNext(3);
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
