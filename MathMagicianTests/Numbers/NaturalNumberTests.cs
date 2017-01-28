@@ -21,6 +21,7 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void EnsureOneIsTheFirstNumber()
         {
+            //int GetFirst();
             //Arrange (Where you set stuff up)
             NaturalNumber naturalNumber = new NaturalNumber();
 
@@ -34,32 +35,46 @@ namespace MathMagicianTests.Numbers
         [TestMethod]
         public void EnsureGetNext()
         {
+            //int GetNext(int current);
             //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
 
             //Act
+            int expectedResult = 1;
+            int actualResult = naturalNumber.GetNext(20);
 
             //Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod]
         public void EnsureGetSequence()
         {
+            //int[] GetSequence(int how_many);
             //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
 
             //Act
+            int[] expectedResult = new int[] { 10,15,20 };
+            int[] actualResult = naturalNumber.GetSequence(10);
 
             //Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
         [TestMethod]
         public void EnsurePrintNumbers()
         {
+            //string PrintNumbers(int[] how_many);
             //Arrange
+            NaturalNumber naturalNumber = new NaturalNumber();
 
             //Act
+            int[] expectedResult = new int[] { 10, 20, 30 };
+            int[] actualResult = naturalNumber.PrintNumbers(10);
 
             //Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
-//int GetNext(int current);
-//int[] GetSequence(int how_many);
-//string PrintNumbers(int[] how_many);
+
+

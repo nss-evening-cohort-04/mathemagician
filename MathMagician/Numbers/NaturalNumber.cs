@@ -28,12 +28,12 @@ namespace MathMagician.Numbers
 
         public int[] GetSequence(int how_many)
         {
-            throw new NotImplementedException();
+           return how_many[];
         }
 
         public string PrintNumbers(int[] how_many)
         {
-            throw new NotImplementedException();
+           return how_many[];
         }
     }
 }

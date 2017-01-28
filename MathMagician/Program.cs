@@ -10,7 +10,7 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Command choices: Integer, Prime, Fibonacci, Even or Odd.");
+            Console.WriteLine("Command choices: Natural, Prime, Fibonacci, Even or Odd.");
             Console.WriteLine("Pick a command: "); //How you provide the user useful info is on you.
             //think about, 'How will the user pick a command?'
             //Is it better to modify the original question? Make it more useful?
