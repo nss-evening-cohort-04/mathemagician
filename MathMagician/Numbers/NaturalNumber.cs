@@ -45,19 +45,9 @@ namespace MathMagician.Numbers
             return NumbersToPrint.ToArray();
         }
 
-        public string PrintNumbers(int[] how_many)
+        public string PrintNumbers(int[] number_array)
         {
-            string Print = "|";
-            foreach(var number in how_many)
-            {
-                Print += number.ToString() + "|";
-            }
-            Console.WriteLine(Print);
-
-            Console.WriteLine("Press anykey to exit...");
-
-            Console.ReadKey();
-            return Print;
+            return String.Join(" ", number_array);
         }
     }
 }
