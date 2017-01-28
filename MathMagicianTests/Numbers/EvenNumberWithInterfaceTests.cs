@@ -6,7 +6,7 @@ using MathMagician.Numbers;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class EvenNumberTests
+    public class EvenNumberWithInterfaceTests
     {
         //**This is a sanity test example. It ensures everything is hooked up correctly
         //** AND that the permissions are correct.

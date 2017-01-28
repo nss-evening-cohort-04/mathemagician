@@ -6,31 +6,22 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class NaturalNumber : Integer // "public" ='s any code outside the class can access this class
+    public class EvenNumberWithInterface : Integer
     {
-        protected int First { get; set; } // this is an example of a property
-        protected int step { get; set;} // this is an example of a property
-        //protected int current { get; set; } // this is an example of a property
+        private int EvenFirst { get; set; } // this is an example of a property
+       
 
-
-        public NaturalNumber() //example of a constructor
+        public EvenNumberWithInterface() //example of a constructor
         {
-            First = 1; //this calls the setter
+            EvenFirst = 2; //this calls the setter
         }
-
         public int GetFirst()
         {
-            return First;
-            //this.First = 1; --> 'this' means the current class instance
-            //the above is the exact same as  return First
+            return EvenFirst;
         }
-
-       virtual public int GetNext(int current)
+        public int GetNext(int current)
         {
-            //'current' argument is read-only
-            //given the current number, go to the next number
-
-            return current + 1;
+            return current + 2;
         }
 
         public int[] GetSequence(int how_many)
