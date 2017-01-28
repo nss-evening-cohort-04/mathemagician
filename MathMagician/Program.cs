@@ -10,7 +10,7 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
-            string[] numberChoices = ["even", "odd", "natural", "prime", "fibonacci"];
+            string[] numberChoices = new string[] { "even", "odd", "natural", "prime", "fibonacci" };
 
             // Ask the user how they feel
             Console.WriteLine("What kind of numbers should I print for you:");
@@ -31,12 +31,13 @@ namespace MathMagician
             HowManyNumbersToPrint:
                 // logic to determine how many numbers to print
                 // if number is invalid
-                    // write error and ...
-                    goto HowManyNumbersToPrint;
+                // write error and ...
+                goto HowManyNumbersToPrint;
 
                 // if number is valid
                 // call the proper function for the type of number they want and ...
-                int[] values = Enumerable.Range(start, end - start).ToArray();
+                // int[] values = Enumerable.Range(start, end - start).ToArray();
+                string listOfNumbers = "";
                 goto Finish;
             Finish:
 
@@ -49,7 +50,7 @@ namespace MathMagician
             }
             else
             {
-                Console.WriteLine("Try again, please write something I can understand")
+                Console.WriteLine("Try again, please write something I can understand");
             }
         }
     }
