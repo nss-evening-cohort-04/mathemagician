@@ -29,7 +29,26 @@ namespace MathMagicianTests.Numbers
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);
-
         }
+
+        [TestMethod]
+        public void EnsureNextNumberInSequenceIsNatural()
+        {
+            // Arrange (Where you set stuff up)
+            NaturalNumber naturalNumber = new NaturalNumber();
+
+            // Act (Call the method you're testing)
+            int expectedResult = 13;
+            int actualResult = naturalNumber.GetNext(12);
+
+            // Assert (Check the output from your method)
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        //[TestMethod]
+        ////public void En()
+        //{
+
+        //}
     }
 }
