@@ -9,13 +9,13 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         private int First { get; set; }
-        private List<int> Sequence { get;  set;}
+        //private List<int> Sequence { get;  set;} - my original solution
 
         public NaturalNumber()
         {
             First = 1;
             //this.First = 1;
-            List<int> Sequence = new List<int>();
+            //List<int> Sequence = new List<int>(); - my original solution
         }
         
         public int GetFirst()
@@ -30,19 +30,27 @@ namespace MathMagician.Numbers
 
         public int[] GetSequence(int how_many)
         {
-            Sequence = new List<int>();
+            //Sequence = new List<int>();
 
-            for (int i = First; i <= how_many; i++)
+            //for (int i = First; i <= how_many; i++)
+            //{
+            //Sequence.Add(i);
+            //}
+
+            //return Sequence.ToArray();
+            int[] numbers = new int[how_many];
+            numbers[0] = GetFirst(); // i = 1
+            for (int i = 1; i < numbers.Length; i++)
             {
-                Sequence.Add(i);
+                numbers[i] = GetNext(numbers[i - 1]);
             }
 
-            return Sequence.ToArray();
+            return numbers;
         }
 
-        public string PrintNumbers(int[] how_many)
+        public string PrintNumbers(int[] number_array)
         {
-            throw new NotImplementedException();
+            return String.Join(" ", number_array);
         }
     }
 }
