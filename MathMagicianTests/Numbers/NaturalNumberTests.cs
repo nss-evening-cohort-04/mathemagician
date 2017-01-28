@@ -57,12 +57,13 @@ namespace MathMagicianTests.Numbers
 
 
             //Act
-            int[] expectedResult = new int [5];
+            int[] expectedResult = new int[] { 1, 2, 3, 4, 5};
             int[] actualResult = naturalNumber.GetSequence(how_many);
 
             //Assert
-            CollectionAssert.AreEqual(expectedResult, actualResult);
+            CollectionAssert.AreEquivalent(expectedResult, actualResult);
         }
+
 
 
     }
