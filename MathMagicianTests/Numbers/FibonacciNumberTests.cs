@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MathMagician.Numbers;
 
@@ -7,69 +11,72 @@ namespace MathMagicianTests.Numbers
     [TestClass]
     public class FibonacciNumberTests
     {
-        // This is a sanity check test.
-        // Ensure everthing is hooked up correctly AND
-        // that the permissions are correct.
+        // Recursive Definition of Fibonacci
+        // F3 = F2 + F1
+        // F7 = F6 + F5
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            FibonacciNumber fibonacciNumber = new FibonacciNumber();
-            Assert.IsNotNull(fibonacciNumber);
+            FibonacciNumber fiboNumber = new FibonacciNumber();
+            Assert.IsNotNull(fiboNumber);
         }
 
         [TestMethod]
-        public void EnsureOneIsTheFirstNumber()
+        public void EnsureOneIsTheFirst()
         {
             // Arrange (Where you set stuff up)
-            FibonacciNumber fibonacciNumber = new FibonacciNumber();
+            FibonacciNumber fiboNumber = new FibonacciNumber();
 
             // Act (Call the method you're testing)
             int expectedResult = 1;
-            int actualResult = fibonacciNumber.GetFirst();
+            int actualResult = fiboNumber.GetFirst();
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-        public void EnsureNextIsTheNextNumber()
+        public void EnsureICanGetNext()
         {
-            // Arrange (Where you set stuff up)
-            FibonacciNumber fibonacciNumber = new FibonacciNumber();
+            // Arrange
+            FibonacciNumber fiboNumber = new FibonacciNumber();
 
-            // Act (Call the method you're testing)
-            int expectedResult = 3;
-            int actualResult = fibonacciNumber.GetNext(1, 2);
+            // Act
+            int expectedResult = 8;
+            //int myNum; this is zero "0"
+            int actualResult = fiboNumber.GetNext(5, 3);
 
-            // Assert (Check the output from your method)
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-        public void EnsureNumsAreRequestedNums()
+        public void EnsureICanGetSequence()
         {
-            // Arrange (Where you set stuff up)
-            FibonacciNumber fibonacciNumber = new FibonacciNumber();
+            // Arrange
+            FibonacciNumber fiboNumber = new FibonacciNumber();
 
-            // Act (Call the method you're testing)
-            int[] expectedResult = new int[] { 1, 1, 2, 3 };
-            int[] actualResult = fibonacciNumber.GetSequence(4);
+            // Act
+            int[] expectedResult = { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 };            //int myNum; this is zero "0"
+            int[] actualResult = fiboNumber.GetSequence(10);
 
-            // Assert (Check the output from your method)
-            CollectionAssert.Equals(expectedResult, actualResult);
+            // Assert
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-        public void EnsurePrintNumbersWork()
+        public void EnsureICanPrintSequence()
         {
-            // Arrange (Where you set stuff up)
-            FibonacciNumber fibonacciNumber = new FibonacciNumber();
+            // Arrange
+            FibonacciNumber fiboNumber = new FibonacciNumber();
 
-            // Act (Call the method you're testing)
-            string expectedResult = "1 1 2";
-            string actualResult = fibonacciNumber.PrintNumbers(fibonacciNumber.GetSequence(3));
+            // Act
+            string expectedResult = "1 1 2 3 5";
+            int[] inputArray = new[] { 1, 1, 2, 3, 5 };
+            string actualResult = fiboNumber.printNumbers(inputArray);
 
-            // Assert (Check the output from your method)
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
     }

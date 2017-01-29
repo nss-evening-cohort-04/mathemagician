@@ -6,26 +6,41 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class FibonacciNumber : NaturalNumber
+    public class FibonacciNumber : Integer
     {
-        public int GetNext(int current, int previous)
+
+        public int fiboFirst { get; set; }
+        public int Step { get; set; }
+        
+
+        public int GetFirst()
         {
-            return current + previous;
+            return fiboFirst;
         }
 
-        public override int[] GetSequence(int how_many)
+        public int GetNext(int current)
         {
-            int[] fibonacciNums = new int[how_many];
-            fibonacciNums[0] = GetFirst(); // set first
-            if (how_many >= 2)
+            int newFiboNumber = current + Previous;
+        public int Previous = 3;
+            return newFiboNumber;
+        }
+
+        public int[] GetSequence(int how_many)
+        {
+            int[] numbers = new int[how_many];
+            numbers[0] = GetFirst(); // i = 1
+            for (int i = 1; i < numbers.Length; i++)
             {
-                fibonacciNums[1] = 1;
-            } // set second
-            for (int i = 2; i < how_many; i++)
-            {
-                fibonacciNums[i] = fibonacciNums[i - 1] + fibonacciNums[i - 2];
-            } // set those after second
-            return fibonacciNums;
+                numbers[i] = GetNext(numbers[i - 1]);
+            }
+
+            return numbers;
+
+        }
+
+        public string printNumbers(int[] number_array)
+        {
+            return String.Join(" ", number_array);
         }
     }
 }
