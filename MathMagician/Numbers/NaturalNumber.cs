@@ -25,7 +25,8 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            throw new NotImplementedException();
+ 
+            return current = current + 1;
         }
 
         public int[] GetSequence(int how_many)
