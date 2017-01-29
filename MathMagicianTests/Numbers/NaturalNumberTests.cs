@@ -7,9 +7,11 @@ namespace MathMagicianTests.Numbers
     [TestClass]
     public class NaturalNumberTests
     {
+
         //This a sanity check test.
         //Ensures everything is hooked up correctly and
         //that the permissions are correct.
+      
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
@@ -73,9 +75,8 @@ namespace MathMagicianTests.Numbers
             string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
 
             //Assert
+
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
-
-

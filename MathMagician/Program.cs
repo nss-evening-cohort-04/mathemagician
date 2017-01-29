@@ -10,6 +10,7 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Command choices: Natural, Prime, Fibonacci, Even or Odd.");
             Console.WriteLine("Pick a command: "); //How you provide the user useful info is on you.
             //think about, 'How will the user pick a command?'
@@ -33,6 +34,7 @@ namespace MathMagician
             Console.WriteLine($"Cool, I'm going to print {howMany} {command} numbers.");
 
             //okay!! Print some stuff!
+
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
