@@ -8,12 +8,14 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int First { get; set; }
+        protected int First { get; set; }
+        protected int Step { get; set; }
         //private List<int> Sequence { get;  set;} - my original solution
 
         public NaturalNumber()
         {
             First = 1;
+            Step = 1;
             //this.First = 1;
             //List<int> Sequence = new List<int>(); - my original solution
         }
@@ -23,9 +25,9 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext(int current)
+        virtual public int GetNext(int current)
         {
-            return current + 1;
+            return current + Step;
         }
 
         public int[] GetSequence(int how_many)

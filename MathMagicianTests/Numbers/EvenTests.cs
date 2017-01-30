@@ -15,7 +15,7 @@ namespace MathMagicianTests.Numbers
         }
 
         [TestMethod]
-        public void EnsureCanGetFirstNumber()
+        public void EnsureFirstNumberIsTwo()
         {
             //Arrange
             Even even = new Even();
@@ -66,9 +66,12 @@ namespace MathMagicianTests.Numbers
             Even even = new Even();
 
             //Act
+            string expectedResult = "2 4 6";
+            int[] inputArray = new[] { 2, 4, 6 };
+            string actualResult = even.PrintNumbers(inputArray);
 
             //Assert
-
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }

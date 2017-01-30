@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class Even : NaturalNumber
+    public class Fibonacci : NaturalNumber
     {
-
-        public Even()
-        {
-            First = 2;
-            Step = 2;
-        }
+        private int[] BaseSequence { get; set; }
     }
 }
