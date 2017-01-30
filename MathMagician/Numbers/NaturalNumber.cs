@@ -22,20 +22,18 @@ namespace MathMagician.Numbers
 
         public int GetNext(int current)
         {
-            int Next = current + 1;
-            return Next;
+            return current + 1;
         }
 
         public int[] GetSequence(int how_many)
         {
-            List<int> NumbersToPrint = new List<int>();
-            while (Current <= how_many)
+            int[] numbers = new int[how_many];
+            numbers[0] = GetFirst();
+            for (var i = 1; i < numbers.Length; i++)
             {
-                NumbersToPrint.Add(Current);
-                GetNext(Current);
-                Current += 1;
+                numbers[i] = GetNext(numbers[i - 1]);
             }
-            return NumbersToPrint.ToArray();
+            return numbers;
         }
 
         public string PrintNumbers(int[] number_array)
