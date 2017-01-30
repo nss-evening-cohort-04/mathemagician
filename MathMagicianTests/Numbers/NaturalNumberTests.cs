@@ -66,7 +66,7 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             // Act (Call the method you're testing)
-            string expectedResult = "1, 2, 3, 4, 5";
+            string expectedResult = "1 2 3 4 5";
             string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
 
             // Assert (Check the output from your method)
