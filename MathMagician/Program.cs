@@ -45,10 +45,19 @@ namespace MathMagician
                 else if (command == 3)
                 {
                     typeSelected = "odd";
+                    Console.WriteLine($"Cool, I am going to print {howMany} {typeSelected} numbers.");
+                    OddNumber oddNumber = new OddNumber();
+                    int[] arrayToPrint = oddNumber.GetSequence(howMany);
+                    Console.WriteLine(oddNumber.PrintNumbers(arrayToPrint));
                 }
                 else if (command == 4)
                 {
                     typeSelected = "fibonacci";
+                    Console.WriteLine($"Cool, I am going to print {howMany} {typeSelected} numbers.");
+                    FibonacciNumber fibNumber = new FibonacciNumber();
+                    int[] arrayToPrint = fibNumber.GetSequence(howMany);
+                    Console.WriteLine(fibNumber.PrintNumbers(arrayToPrint));
+
                 }
                 else
                 {

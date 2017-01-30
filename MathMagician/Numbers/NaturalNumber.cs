@@ -9,14 +9,16 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         //don't want them to access it outside of the class//
-        private int FirstNumber { get; set; }
+        protected int FirstNumber { get; set; }
+
+        protected int Step { get; set; }
 
         private int CurrentNumber { get; set; }
 
         public NaturalNumber()
         {
             FirstNumber = 1;
-            CurrentNumber = 0;
+            Step = 1;
         }
 
         public int GetFirst()
@@ -24,12 +26,12 @@ namespace MathMagician.Numbers
             return FirstNumber;
         }
 
-        public int GetNext(int current)
+        virtual public int GetNext(int current)
         {
-            return current += 1;
+            return current += Step;
         }
 
-        public int[] GetSequence(int howMany)
+        virtual public int[] GetSequence(int howMany)
         {
             int[] numbers = new int[howMany];
             numbers[0] = GetFirst();
