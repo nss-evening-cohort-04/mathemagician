@@ -8,18 +8,11 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int First { get; set; }
-
-        private int Current { get; set; }
-
-        private int Next { get; set; }
-
-        private int HowMany { get; set; }
+        protected int First { get; set; }
 
         public NaturalNumber()
         {
             First = 1;
-            Current = 1;
         }
 
         public int GetFirst()

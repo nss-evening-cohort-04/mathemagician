@@ -8,7 +8,7 @@ namespace MathMagician.Numbers
 {
     public class EvenNumber : Integer
     {
-        private int First { get; set; }
+        protected int First { get; set; }
 
         public EvenNumber()
         {
