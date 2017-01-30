@@ -31,7 +31,7 @@ namespace MathMagician.Numbers
                 current = current + 2;
             }
             return current;
-        }
+        } 
 
         public int[] GetSequence(int howMany)
         {
