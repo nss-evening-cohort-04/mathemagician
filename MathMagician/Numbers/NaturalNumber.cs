@@ -20,12 +20,12 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext(int current)
+        public virtual int GetNext(int current)
         {
             return current + 1;
         }
 
-        public int[] GetSequence(int how_many)
+        public virtual int[] GetSequence(int how_many)
         {
             int[] numbers = new int[how_many];
             numbers[0] = GetFirst();
