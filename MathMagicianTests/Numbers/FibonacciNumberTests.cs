@@ -15,7 +15,7 @@ namespace MathMagicianTests.Numbers
         //F3 = F2 + F1;
         //F7 = F6 + F5;
         [TestMethod]
-        public void EnsureICanCreatInstance()
+        public void EnsureICanCreateInstance()
         {
             FibonacciNumber fiboNumber = new FibonacciNumber();
             Assert.IsNotNull(fiboNumber);
@@ -30,11 +30,26 @@ namespace MathMagicianTests.Numbers
 
             //Act (call the method you're testing)
             //test only one method at a time
-            int expectedResult = 2;
+            int expectedResult = 1;
             int actualResult = fiboNumber.GetFirst();
 
             //Assert (check the output from your method)
             Assert.AreEqual(actualResult, expectedResult);
+        }
+
+        [TestMethod]
+        public void EnsureICanGetNext()
+        {
+            // Arrange
+            FibonacciNumber fiboNumber = new FibonacciNumber();
+
+            // Act
+            int expectedResult = 8;
+            //int myNum; this is zero "0"
+            int actualResult = fiboNumber.GetNext(5);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
@@ -60,13 +75,13 @@ namespace MathMagicianTests.Numbers
             FibonacciNumber fiboNumber = new FibonacciNumber();
 
             //Act (call the method you're testing)
-            //test only one method at a time
-            int[] sequenceArray = fiboNumber.GetSequence(10);
-            string actualResult = fiboNumber.PrintNumbers(sequenceArray);
+            string expectedResult = "1 1 2 3 5";
+            int[] inputArray = new[] { 1, 1, 2, 3, 5 };
+            string actualResult = fiboNumber.PrintNumbers(inputArray);
 
 
             //Assert (check the output from your method)
-            Assert.AreEqual(actualResult, "2 4 6 8 10 12 14 16 18 20");
+            Assert.AreEqual(expectedResult, actualResult);
 
         }
     }

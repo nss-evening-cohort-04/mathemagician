@@ -33,7 +33,7 @@ namespace MathMagician.Numbers
 
         }
 
-        public int[] GetSequence(int how_many)
+        virtual public int[] GetSequence(int how_many)
         {
             int[] numbers = new int[how_many];
             numbers[0] = GetFirst(); // i = 1
@@ -47,7 +47,7 @@ namespace MathMagician.Numbers
             return numbers;
         }
 
-        public string PrintNumbers(int[] number_array)
+        virtual public string PrintNumbers(int[] number_array)
         {
             return String.Join(" ", number_array);
         }

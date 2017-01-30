@@ -44,7 +44,18 @@ namespace MathMagician
                     break;
 
                 case "fibonacci":
-                    Console.WriteLine($"Still working on");
+                    FibonacciNumber fibo = new FibonacciNumber();
+                    Console.WriteLine("How many should I print ?");
+                    how_many = int.Parse(Console.ReadLine());
+                    if (how_many > 30)
+                    {
+                        Console.WriteLine($"Oh yeah, keep the number less than or equal to 30...");
+                        Console.ReadKey();
+                    }
+                    Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+                    int[] FiboToPrint = fibo.GetSequence(how_many);
+                    Console.WriteLine(fibo.PrintNumbers(FiboToPrint));
+                    Console.WriteLine("press any key to exit...");
                     Console.ReadKey();
                     break;
 
