@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Numbers\OddNumber.cs" />
     <Compile Include="Numbers\FibonacciNumber.cs" />
     <Compile Include="Numbers\EvenNumber.cs" />
     <Compile Include="Numbers\Integer.cs" />
