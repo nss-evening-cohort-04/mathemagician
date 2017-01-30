@@ -12,16 +12,18 @@ namespace MathMagician.Numbers
         public EvenNumber()
         {
             First = 2;
-        }
-        public override int GetFirst()
-        {
-            return First;
+            Step = 2;
         }
 
-       public override int GetNext(int current)
-        {
-            return current += 2;
-        }
+        //public override int GetFirst()
+        //{
+        //    return First;
+        //}
+
+       //public override int GetNext(int current)
+       // {
+       //     return current += 2;
+       // }
 
         //public int[] GetSequence(int how_many)
         //{
