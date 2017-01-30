@@ -9,6 +9,7 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         protected int First { get; set; }
+        protected int Step { get; set; }
 
         // One approach is to use a list to hold calculated numbers
         //private List<int> sequence { get; set; }
@@ -16,6 +17,7 @@ namespace MathMagician.Numbers
         public NaturalNumber()
         {
             First = 1;
+            Step = 1;
             // this.First = 1;
         }
 
@@ -27,11 +29,11 @@ namespace MathMagician.Numbers
         virtual public int GetNext(int current)
         {
             // 'current' argument is read-only
-            return current + 1;
+            return current + Step;
 
         }
 
-        public int[] GetSequence(int how_many)
+        virtual public int[] GetSequence(int how_many)
         {
             int[] numbers = new int[how_many];
             numbers[0] = GetFirst(); // i = 1
@@ -45,7 +47,7 @@ namespace MathMagician.Numbers
             return numbers;
         }
 
-        public string PrintNumbers(int[] number_array)
+        virtual public string PrintNumbers(int[] number_array)
         {
             return String.Join(" ", number_array);
         }
