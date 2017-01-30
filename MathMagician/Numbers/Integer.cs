@@ -8,7 +8,7 @@ namespace MathMagician.Numbers
 {
     interface Integer
     {
-        int GetFirst(); // 
+        int GetFirst();
         int GetNext(int current);
         int[] GetSequence(int howMany);
         string PrintNumbers(int[] howMany);
