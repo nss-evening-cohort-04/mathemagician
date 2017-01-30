@@ -56,6 +56,7 @@
     <Compile Include="Numbers\FibonacciNumberTests.cs" />
     <Compile Include="Numbers\NaturalNumberTests.cs" />
     <Compile Include="Numbers\OddNumberTests.cs" />
+    <Compile Include="Numbers\PrimeNumberTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

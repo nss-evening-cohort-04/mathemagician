@@ -39,7 +39,18 @@ namespace MathMagician
                     break;
 
                 case "primes":
-                    Console.WriteLine($"Still working on");
+                    PrimeNumber prime = new PrimeNumber();
+                    Console.WriteLine("How many should I print ?");
+                    how_many = int.Parse(Console.ReadLine());
+                    if (how_many > 30)
+                    {
+                        Console.WriteLine($"Oh yeah, keep the number less than or equal to 30...");
+                        Console.ReadKey();
+                    }
+                    Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+                    int[] PrimeToPrint = prime.GetSequence(how_many);
+                    Console.WriteLine(prime.PrintNumbers(PrimeToPrint));
+                    Console.WriteLine("press any key to exit...");
                     Console.ReadKey();
                     break;
 
