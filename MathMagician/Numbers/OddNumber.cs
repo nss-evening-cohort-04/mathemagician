@@ -10,8 +10,8 @@ namespace MathMagician.Numbers
     {
         public OddNumber()
         {
-            First = 2;
-            Step = 2;
+            First = 1;
+         
         }
         public override int GetNext(int current)
         {
