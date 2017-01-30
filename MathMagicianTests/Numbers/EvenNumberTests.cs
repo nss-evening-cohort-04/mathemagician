@@ -54,7 +54,7 @@ namespace MathMagicianTests.Numbers
             EvenNumber evenNumber = new EvenNumber();
 
             // Act
-            int[] expectedResult = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+            int[] expectedResult = {0, 2, 4, 6, 8, 10 };
             int[] actualResult = evenNumber.GetSequence(10);
 
             // Assert

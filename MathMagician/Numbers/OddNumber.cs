@@ -35,12 +35,20 @@ namespace MathMagician.Numbers
 
         public int[] GetSequence(int howMany)
         {
-            throw new NotImplementedException();
+            int[] numbers = new int[howMany];
+            numbers[0] = GetFirst();
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                numbers[i] = GetNext(numbers[i - 1]);
+            }
+
+            return numbers;
         }
 
-        public string PrintNumbers(int[] howMany)
+        public string PrintNumbers(int[] numbersArray)
         {
-            throw new NotImplementedException();
+            return String.Join(" ", numbersArray);
         }
     }
 }
