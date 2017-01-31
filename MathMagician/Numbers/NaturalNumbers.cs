@@ -30,7 +30,7 @@ namespace MathMagician.Numbers
         public int[] GetSequence(int how_many)
         {
             int[] numbers = new int[how_many];
-            numbers[0] = GetFirst();
+            numbers[0] = First;
 
             for (int i = 1; i < numbers.Length; i++)
             {
