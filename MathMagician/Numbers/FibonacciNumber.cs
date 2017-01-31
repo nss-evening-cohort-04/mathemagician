@@ -8,13 +8,15 @@ namespace MathMagician.Numbers
 {
     public class FibonacciNumber : NaturalNumber
     {
-        private int BaseSequence { get; set; }
+        private int[] BaseSequence { get; set; }
 
         public FibonacciNumber()
         {
             First = 1;
-            //Step = FiboSequence();
-            
+            //Step = FibonacciNumber.GetSequence(howMany);
+            BaseSequence = new int[] { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 }; // can i add to BaseSequence if it's an array? 
+
+
         }
 
 
@@ -33,7 +35,7 @@ namespace MathMagician.Numbers
         //        a = b;
         //        b = temporary + b;
 
-        //        fiboOutput.ToArray(b);
+        //        fiboOutput[b] = howMany;
         //    }
 
         //    return fiboOutput;
