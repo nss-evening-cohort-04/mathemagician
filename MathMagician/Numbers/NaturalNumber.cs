@@ -8,6 +8,8 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
+        private string[] number_array;
+
         protected int First { get; set; }
         protected int Step { get; set; }
         //private List<int> Sequence { get;  set;} - my original solution
@@ -19,7 +21,12 @@ namespace MathMagician.Numbers
             //this.First = 1;
             //List<int> Sequence = new List<int>(); - my original solution
         }
-        
+
+        public NaturalNumber(string[] number_array)
+        {
+            this.number_array = number_array;
+        }
+
         public int GetFirst()
         {
             return First;
