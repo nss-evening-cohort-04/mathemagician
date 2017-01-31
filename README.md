@@ -53,7 +53,7 @@ With your instructor, implement part of the "Desired Workflow" in your `Program.
 
 In your implementation project, you will create the following classes:
 
-- NaturalNumber (Should inherit the `Integer` interface)
+- NaturalNumber (Should implement the `Integer` interface)
 - EvenNumber
 - OddNumber
 - FibonacciNumber
