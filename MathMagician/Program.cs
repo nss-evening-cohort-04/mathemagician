@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MathMagician.Numbers;
+
 
 namespace MathMagician.Numbers
 {
@@ -10,29 +12,63 @@ namespace MathMagician.Numbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What type of number would you like me to display? Integers, Primes, Fibbonaci, Odd or Even?");
+            Console.WriteLine("What type of number would you like me to display?");
+            Console.WriteLine("Press 1 for Integer");
+            Console.WriteLine("Press 2 for Fibonacci");
 
-            string command = Console.ReadLine();
+            string command = Console.ReadLine();  
+            int commandReturned = Int32.Parse(command);
+
             //once I have the command, how do I check to see if it is a valid command?
 
             //when should you actually create an instance of your number class? now or later?
             Console.WriteLine("How many should I print?");
 
             string how_many = Console.ReadLine();
+            int numberReturned = Int32.Parse(how_many);
+
 
             // when do I check if the how many response is too big?
             //if they enter a number > 30, how do I respond and exit the program?
 
-            Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+            if (commandReturned == 1)
+            {
+                Console.WriteLine($"Cool, I'm going to print {numberReturned} Integer natural numbers.");
 
-            //okay! Print some stuff!
-            //string [] number_array = Console.WriteLine( { number_array } );
+                NaturalNumber naturalNumber = new NaturalNumber();
+                var whatToPrint = naturalNumber.GetSequence(numberReturned);
+                naturalNumber.PrintNumbers(whatToPrint);
+
+                //okay! Print some stuff!
+                Console.WriteLine(naturalNumber.PrintNumbers(whatToPrint));
+            } else if (commandReturned == 2)
+            {
+                Console.WriteLine($"Cool, I'm going to print {numberReturned} Fibonacci numbers.");
+
+                FibonacciNumber fiboNumber = new FibonacciNumber();
+                var whatToPrint = fiboNumber.GetSequence(numberReturned);
+                fiboNumber.PrintNumbers(whatToPrint);
+
+                //okay! Print some stuff!
+                Console.WriteLine(fiboNumber.PrintNumbers(whatToPrint));
+            }
+     
 
 
             Console.WriteLine("Press any key to exit.");
 
             Console.ReadKey();
 
+        }
+
+        private static void NaturalNumbers()
+        {
+            string command = Console.ReadLine();
+        }
+
+        private static bool EnsureOneIsTheFirstNumber()
+        {
+            throw new NotImplementedException();
         }
     }
 }

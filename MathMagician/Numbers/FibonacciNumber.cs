@@ -24,9 +24,9 @@ namespace MathMagician.Numbers
         {
             int[] fibNums = new int[how_many];
 
-            fibNums[0] = GetFirst();
+            fibNums[1] = GetFirst();
 
-            for (int i = 2; i < 10; i++)
+            for (int i = 2; i < fibNums.Length; i++)
             {
                 fibNums[i] = GetNext(fibNums[i - 2]) + GetNext(fibNums[i - 1]);
             }
