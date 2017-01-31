@@ -29,9 +29,24 @@ namespace MathMagicianTests.Numbers
             // Assert 
             Assert.AreEqual(expectedResult, actualResult);
         }
-      
 
+        [TestMethod]
+        public void EnsureNumsAreRequestedNums()
+        {
+            // Arrange 
+            OddNumber oddNumber = new OddNumber();
+
+            // Act
+            int[] expectedResult = { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
+            int[] actualResult = oddNumber.GetSequence(10);
+
+            // Assert
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
+
+
+    }
 
        
     }
