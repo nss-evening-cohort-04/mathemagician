@@ -7,48 +7,12 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class OddNumber : Integer
+    public class OddNumber : NaturalNumber
     {
-        private int First { get; set; }
-
         public OddNumber()
         {
             First = 1;
-        }
-        public int GetFirst()
-        {
-            return First;
-        }
-
-        public int GetNext(int current)
-        {
-            if((current % 2) == 0)
-            {
-                current = current + 1;
-            }
-            else
-            {
-                current = current + 2;
-            }
-            return current;
-        } 
-
-        public int[] GetSequence(int howMany)
-        {
-            int[] numbers = new int[howMany];
-            numbers[0] = GetFirst();
-
-            for (int i = 1; i < numbers.Length; i++)
-            {
-                numbers[i] = GetNext(numbers[i - 1]);
-            }
-
-            return numbers;
-        }
-
-        public string PrintNumbers(int[] numbersArray)
-        {
-            return String.Join(" ", numbersArray);
+            Step = 2;
         }
     }
 }

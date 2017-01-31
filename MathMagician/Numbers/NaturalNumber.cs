@@ -9,12 +9,13 @@ namespace MathMagician.Numbers
     public class NaturalNumber : Integer
     {
         
-        private int First { get; set; }
-        
+        protected int First { get; set; }
+        protected int Step { get; set; }
+
         public NaturalNumber()
         {
             First = 1;
-            // this.First = 1;
+            Step = 1;
         }
 
         public int GetFirst()
@@ -26,8 +27,7 @@ namespace MathMagician.Numbers
         // IE pass 1 return 2
         public int GetNext(int current)
         {
-            int addOne = current + 1;
-            return addOne;
+            return current + Step;
         }
 
         // I am defining the sequence as NaturalNumbers from
