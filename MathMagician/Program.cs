@@ -20,24 +20,32 @@ namespace MathMagician
             //Prompt for user
             string command = Console.ReadLine().ToLower(); //converts string to lowercase to prevent casing errors during user input
 
-           /*if (command != "natural" || command != "even" || command != "odd" || command != "fibonacci")
+            if (command == "even" || command == "odd" || command == "natural" || command == "fibonacci")
             {
-                Console.WriteLine("I'm sorry, that is not a number type I understand. Please reopen to try again."); //Prints invalid command message to user.
-                System.Threading.Thread.Sleep(3000);//Delays application close by 3 seconds so user can see message.
-                Environment.Exit(0); //Exits the application
-            }*/
+                Console.WriteLine("How many should I print?");
+                Console.Write(prompt);
+            }
+            else
+            {
+                Console.WriteLine("I'm sorry, that's not a number type I recognize."); //Displays message to user
+                System.Threading.Thread.Sleep(3000); //Delays application close by 3 seconds so user can see message
+                Environment.Exit(0);
+            }
            
-            Console.WriteLine("How many should I print?");
-            Console.Write(prompt);
+
+            
             //Another prompt
             int how_many = Convert.ToInt32(Console.ReadLine());
             //converts input to an int
             if (how_many <= 0 || how_many > 30) //evaluates if input is between 1 and 30
             {
-                Console.WriteLine("I'm sorry, I can only print between 1 and 30 numbers. Please reopen to try again."); //Displays message to user
+                Console.WriteLine("I'm sorry, I can only print between 1 and 30 numbers."); //Displays message to user
                 System.Threading.Thread.Sleep(3000); //Delays application close so the user can see message.
                 Environment.Exit(0); //Exits application.
+                
             }
+           
+
 
 
             Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
