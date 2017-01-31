@@ -11,22 +11,40 @@ namespace MathMagician
         static void Main(string[] args)
         {
             Console.WriteLine("What would you like for me to do?");
-            Console.WriteLine(""); //"How" you provide the user useful infor is on you.
-            //Think about "How will the user pick a command?"
-            //Is it better to modify the original question?  Make it more useful?
+            Console.WriteLine("I can print the following number types: natural, even, odd, or fibonacci."); //user enters choice.
+            Console.Write(">");
+            //Prompt for user
 
-            string command = Console.ReadLine();
-            //Once I have the command (whatever it looks like), how do I check if it's valid?
+            string command = Console.ReadLine().ToLower();
+            //Converts the string to all lowercase
+            if (command != "natural" || command != "even" || command != "odd" || command != "fibonacci")
+            {
+                Console.WriteLine("I'm sorry, that is not a number type I understand. Please reopen to try again."); //Prints invalid command message to user.
+                System.Threading.Thread.Sleep(3000);//Delays application close by 3 seconds so user can see message.
+                Environment.Exit(0); //Exits the application
+            }
 
-            //When should you actually create an instance of your number class?  Now or later?
+           
             Console.WriteLine("How many should I print?");
-            string how_many = Console.ReadLine();
+            Console.Write(">");
+            //Another prompt
+            int how_many = Convert.ToInt32(Console.ReadLine());
+            //converts input to an int
+            if (how_many <= 0 || how_many > 30) //evaluates if input is between 1 and 30
+            {
+                Console.WriteLine("I'm sorry, I can only print between 1 and 30 numbers. Please reopen to try again."); //Displays message to user
+                System.Threading.Thread.Sleep(3000); //Delays application close so the user can see message.
+                Environment.Exit(0); //Exits application.
+            }
 
-            //When do I check if the "How many" response is too big?
-            //If they enter a number > 30, how do I respond AND exit the program?
 
             Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
             //Okay, print some stuff. 
+
+            if (command == "natural")
+            {
+
+            }
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
