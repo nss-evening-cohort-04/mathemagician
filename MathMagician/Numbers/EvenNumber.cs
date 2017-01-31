@@ -14,7 +14,11 @@ namespace MathMagician.Numbers
         {
             First = 2;
             Step = 2;
+            GetSequence(5);
+            int[] numbers = new int[] { 2, 4, 6, 8, 10};
+            numbers[0] = GetFirst();
         }
+
 
     }
 }

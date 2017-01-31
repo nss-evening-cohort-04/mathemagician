@@ -56,7 +56,7 @@ namespace MathMagicianTests.Numbers
 
 
             //Assert (check output)
-            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            //Assert.AreEqual(expectedResult.Length, actualResult.Length);
             CollectionAssert.AreEqual(expectedResult, actualResult);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MathMagician.Numbers;
 
 namespace MathMagicianTests.Numbers
 {
@@ -21,8 +22,8 @@ namespace MathMagicianTests.Numbers
             
 
             //Assert
-            expectedResult = 1;
-            actualResult = 1;
+            //expectedResult = 1;
+            //actualResult = 1;
 
             //Act
 
