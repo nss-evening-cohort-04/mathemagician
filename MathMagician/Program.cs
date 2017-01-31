@@ -13,8 +13,10 @@ namespace MathMagician.Numbers
         static void Main(string[] args)
         {
             Console.WriteLine("What type of number would you like me to display?");
-            Console.WriteLine("Press 1 for Integer");
-            Console.WriteLine("Press 2 for Fibonacci");
+            Console.WriteLine("Press 1 for Natural Number");
+            Console.WriteLine("Press 2 for Fibonacci Number");
+            Console.WriteLine("Press 3 for Odd Number");
+            Console.WriteLine("Press 4 for Even Number");
 
             string command = Console.ReadLine();  
             int commandReturned = Int32.Parse(command);
@@ -30,29 +32,63 @@ namespace MathMagician.Numbers
 
             // when do I check if the how many response is too big?
             //if they enter a number > 30, how do I respond and exit the program?
-
-            if (commandReturned == 1)
+            if (numberReturned > 30)
             {
-                Console.WriteLine($"Cool, I'm going to print {numberReturned} Integer natural numbers.");
 
-                NaturalNumber naturalNumber = new NaturalNumber();
-                var whatToPrint = naturalNumber.GetSequence(numberReturned);
-                naturalNumber.PrintNumbers(whatToPrint);
+                Console.WriteLine("Please select a number less than 30");
 
-                //okay! Print some stuff!
-                Console.WriteLine(naturalNumber.PrintNumbers(whatToPrint));
-            } else if (commandReturned == 2)
-            {
-                Console.WriteLine($"Cool, I'm going to print {numberReturned} Fibonacci numbers.");
+                Console.WriteLine("Press any key to exit.");
 
-                FibonacciNumber fiboNumber = new FibonacciNumber();
-                var whatToPrint = fiboNumber.GetSequence(numberReturned);
-                fiboNumber.PrintNumbers(whatToPrint);
+                Console.ReadKey();
 
-                //okay! Print some stuff!
-                Console.WriteLine(fiboNumber.PrintNumbers(whatToPrint));
+                Environment.Exit(0);
+
+                if (commandReturned == 1)
+                {
+                    Console.WriteLine($"Cool, I'm going to print {numberReturned} Integer natural numbers.");
+
+                    NaturalNumber naturalNumber = new NaturalNumber();
+                    var whatToPrint = naturalNumber.GetSequence(numberReturned);
+                    naturalNumber.PrintNumbers(whatToPrint);
+
+                    //okay! Print some stuff!
+                    Console.WriteLine(naturalNumber.PrintNumbers(whatToPrint));
+                }
+                else if (commandReturned == 2)
+                {
+                    Console.WriteLine($"Cool, I'm going to print {numberReturned} Fibonacci numbers.");
+
+                    FibonacciNumber fiboNumber = new FibonacciNumber();
+                    var whatToPrint = fiboNumber.GetSequence(numberReturned);
+                    fiboNumber.PrintNumbers(whatToPrint);
+
+                    //okay! Print some stuff!
+                    Console.WriteLine(fiboNumber.PrintNumbers(whatToPrint));
+                }
+                else if (commandReturned == 3)
+                {
+                    Console.WriteLine($"Cool, I'm going to print {numberReturned} odd numbers.");
+
+                    OddNumber oddNumber = new OddNumber();
+                    var whatToPrint = oddNumber.GetSequence(numberReturned);
+                    oddNumber.PrintNumbers(whatToPrint);
+
+                    //okay! Print some stuff!
+                    Console.WriteLine(oddNumber.PrintNumbers(whatToPrint));
+                }
+                else if (commandReturned == 4)
+                {
+                    Console.WriteLine($"Cool, I'm going to print {numberReturned} even numbers.");
+
+                    EvenNumber evenNumber = new EvenNumber();
+                    var whatToPrint = evenNumber.GetSequence(numberReturned);
+                    evenNumber.PrintNumbers(whatToPrint);
+
+                    //okay! Print some stuff!
+                    Console.WriteLine(evenNumber.PrintNumbers(whatToPrint));
+                }
             }
-     
+
 
 
             Console.WriteLine("Press any key to exit.");
@@ -61,14 +97,5 @@ namespace MathMagician.Numbers
 
         }
 
-        private static void NaturalNumbers()
-        {
-            string command = Console.ReadLine();
-        }
-
-        private static bool EnsureOneIsTheFirstNumber()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
