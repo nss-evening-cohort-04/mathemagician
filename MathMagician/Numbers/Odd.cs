@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    class Class1
+    class Odd
     {
     }
 }

@@ -11,7 +11,7 @@ namespace MathMagicianTests.Numbers
         // Ensure everthing is hooked up correctly AND
         // that the permissions are correct.
         [TestMethod]
-        public void EnsureICanCreateInstance()
+        public void EnsureICanCreateInstanceNatural()
         {
             NaturalNumber naturalNumber = new NaturalNumber();
             Assert.IsNotNull(naturalNumber);
@@ -32,7 +32,7 @@ namespace MathMagicianTests.Numbers
         }
 
         [TestMethod]
-        public void EnsureNextIsTheNextNumber()
+        public void EnsureIcanGetTheNextNumber()
         {
             // Arrange (Where you set stuff up)
             NaturalNumber naturalNumber = new NaturalNumber();
@@ -52,11 +52,12 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             // Act (Call the method you're testing)
-            int[] expectedResult = new int[] { 1, 2, 3 };
-            int[] actualResult = naturalNumber.GetSequence(3);
+            int[] expectedResult = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] actualResult = naturalNumber.GetSequence(10);
 
             // Assert (Check the output from your method)
-            CollectionAssert.Equals(expectedResult, actualResult);
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
@@ -66,8 +67,9 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
 
             // Act (Call the method you're testing)
-            string expectedResult = "1 2 3";
-            string actualResult = naturalNumber.PrintNumbers(naturalNumber.GetSequence(3));
+            string expectedResult = "1 2 3 4 5";
+            int[] inputArray = new[] { 1, 2, 3, 4, 5 };
+            string actualResult = naturalNumber.PrintNumbers(inputArray);
 
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);

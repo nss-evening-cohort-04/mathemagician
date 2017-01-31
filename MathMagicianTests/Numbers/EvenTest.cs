@@ -7,15 +7,11 @@ namespace MathMagicianTests.Numbers
     public class EvenTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void EnsureICanCreateInstanceEven()
         {
+          
         }
 
-        [TestMethod]
-        public void EnsureICanCreateInstance()
-        {
-            EvenNumber naturalNumber = new NaturalNumber();
-            Assert.IsNotNull(naturalNumber);
-        }
+
     }
 }

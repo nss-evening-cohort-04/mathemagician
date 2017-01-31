@@ -8,11 +8,13 @@ namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer
     {
-        private int First { get; set; }
+        protected int First { get; set; }
+        protected int Step { get; set; }
 
         public NaturalNumber()
         {
             First = 1;
+            Step = 1;
             // this.First = 1;
         }
 
@@ -21,34 +23,29 @@ namespace MathMagician.Numbers
             return First;
         }
 
-        public int GetNext(int current)
+        virtual public int GetNext(int current)
         {
-            return current + 1;
+            return current + Step;
         }
 
-        public int[] GetSequence(int how_many)
+        virtual public int[] GetSequence(int how_many)
         {
-            int[] naturalNums = new int[how_many];
-            for (int i = 1; i <= how_many; i++)
+            int[] numbers = new int[how_many];
+
+            numbers[0] = GetFirst();
+
+            for (int i = 1; i < numbers.Length; i++)
             {
-                naturalNums[i - 1] = i;
+                numbers[i] = GetNext(numbers[i - 1]);
             }
-            return naturalNums;
-        }
-
-        public string PrintNumbers(int[] how_many)
+            return numbers;
+            }
+            
+            public string PrintNumbers(int[] number_array)
         {
-            return String.Join(" ", how_many);
-        }
-
-        int Integer.GetSequence(int how_many)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string printNumbers(int[] how_many)
-        {
-            throw new NotImplementedException();
+            return String.Join(" ", number_array);
         }
     }
 }
+
+
