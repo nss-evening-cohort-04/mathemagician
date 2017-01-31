@@ -9,19 +9,26 @@ namespace MathMagician
 {
     class Program
     {
+
    
         static void Main(string[] args)
         {
+            string prompt = ">"; //prompt for user to input choice
             Console.WriteLine("What would you like for me to do?");
             Console.WriteLine("I can print the following number types: natural, even, odd, or fibonacci."); //user enters choice.
-            Console.Write(">");
+            Console.Write(prompt);
             //Prompt for user
-
             string command = Console.ReadLine().ToLower(); //converts string to lowercase to prevent casing errors during user input
 
+           /*if (command != "natural" || command != "even" || command != "odd" || command != "fibonacci")
+            {
+                Console.WriteLine("I'm sorry, that is not a number type I understand. Please reopen to try again."); //Prints invalid command message to user.
+                System.Threading.Thread.Sleep(3000);//Delays application close by 3 seconds so user can see message.
+                Environment.Exit(0); //Exits the application
+            }*/
            
             Console.WriteLine("How many should I print?");
-            Console.Write(">");
+            Console.Write(prompt);
             //Another prompt
             int how_many = Convert.ToInt32(Console.ReadLine());
             //converts input to an int
@@ -38,25 +45,23 @@ namespace MathMagician
 
             if (command == "natural")
             {
-                Console.WriteLine();        
+                NaturalNumber naturalNumber = new NaturalNumber();
+                Console.WriteLine(naturalNumber.PrintNumbers(naturalNumber.GetSequence(how_many)));  
+                    
             }
             else if (command == "even")
             {
-                Console.WriteLine();
+                Even even = new Even();
+                Console.WriteLine(even.PrintNumbers(even.GetSequence(how_many)));
             }
             else if (command == "odd")
             {
-                Console.WriteLine();
+                Odd odd = new Odd();
+                Console.WriteLine(odd.PrintNumbers(odd.GetSequence(how_many)));
             }
             else if (command == "fibonacci")
             {
                 Console.WriteLine();
-            }
-            else
-            {
-                Console.WriteLine("I'm sorry, that is not a number type I understand. Please reopen to try again."); //Prints invalid command message to user.
-                System.Threading.Thread.Sleep(3000);//Delays application close by 3 seconds so user can see message.
-                Environment.Exit(0); //Exits the application
             }
 
             Console.WriteLine("Press any key to exit");
