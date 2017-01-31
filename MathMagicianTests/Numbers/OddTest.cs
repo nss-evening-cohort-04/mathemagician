@@ -31,7 +31,7 @@ namespace MathMagicianTests.Numbers
         }
 
         [TestMethod]
-        public void EnsureNumsAreRequestedNums()
+        public void EnsureNumsAreRequestedNumsOdd()
         {
             // Arrange 
             OddNumber oddNumber = new OddNumber();
@@ -43,6 +43,21 @@ namespace MathMagicianTests.Numbers
             // Assert
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
             CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void EnsurePrintNumbersWorkOdd()
+        {
+            // Arrange 
+            OddNumber oddNumber = new OddNumber();
+
+            // Act 
+            string expectedResult = "1 3 5 7 9";
+            int[] inputArray = new[] { 1, 3, 5, 7, 9 };
+            string actualResult = oddNumber.PrintNumbers(inputArray);
+
+            // Assert 
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
 
