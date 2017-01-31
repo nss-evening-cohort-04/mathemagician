@@ -55,6 +55,8 @@
     <Compile Include="Numbers\EvenNumberWithInterfaceTests.cs" />
     <Compile Include="Numbers\NatualNumberTests.cs" />
     <Compile Include="Numbers\EvenNumberTests.cs" />
+    <Compile Include="Numbers\FibonacciNumberTests.cs" />
+    <Compile Include="Numbers\OddNumberTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

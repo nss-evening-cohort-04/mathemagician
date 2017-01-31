@@ -5,27 +5,24 @@ using MathMagician.Numbers;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class FibonacciNumberTests
+    public class OddNumberTests
     {
-        //Recursive Definition of Fibonacci Below:
-        //Fib3 = Fib2 + Fib1
-        //Fib7 = Fib6 + Fib5
         [TestMethod]
         public void EnsureIcanCreateInstance()
         {
-            FibonacciNumber fiboNumber = new FibonacciNumber();
-            Assert.IsNotNull(fiboNumber);
+            OddNumber oddNumber = new OddNumber();
+            Assert.IsNotNull(oddNumber);
         }
 
         [TestMethod]
-        public void GetFirstNumberTestMethod4()
+        public void GetFirstNumberTestMethod5()
         {
             //Arrange (Where you set stuff up)
-            FibonacciNumber fiboNumber = new FibonacciNumber();
+            OddNumber oddNumber = new OddNumber();
 
             //Act (Where you call the method you are testing aka 'GetFirst()' for this example)
             int expectedResult = 1;
-            int actualResult = fiboNumber.GetFirst();
+            int actualResult = oddNumber.GetFirst();
 
             //Assert (Check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);
@@ -34,11 +31,11 @@ namespace MathMagicianTests.Numbers
         public void GetNextTestMethod()
         {
             //arrange 
-            FibonacciNumber fiboNumber = new FibonacciNumber();
+            OddNumber oddNumber = new OddNumber();
 
             //act
-            int expectedResult = 3;
-            int actualResult = fiboNumber.GetNext(1,2);
+            int expectedResult = 3 + 2;
+            int actualResult = oddNumber.GetNext(3);
 
             //assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -48,11 +45,11 @@ namespace MathMagicianTests.Numbers
         public void GetSequence()
         {
             //arrange
-            FibonacciNumber fiboNumber = new FibonacciNumber();
+            OddNumber oddNumber = new OddNumber();
 
             //act
-            int[] expectedResult = { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 };
-            int[] actualResult = fiboNumber.GetSequence(10);
+            int[] expectedResult = { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
+            int[] actualResult = oddNumber.GetSequence(10);
 
             //assert
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
@@ -63,13 +60,12 @@ namespace MathMagicianTests.Numbers
         public void Printumberz()
         {
             //arrange
-            FibonacciNumber fiboNumber = new FibonacciNumber();
+            OddNumber oddNumber = new OddNumber();
 
             //act
-            string expectedResult = "1 1 2 3 5";
-            int[] inputArray = new[] { 1, 1, 2, 3, 5 };
-            string actualResult = fiboNumber.PrintNumbers(inputArray);
-            //string actualResult = evenNumber.PrintNumbers(new [] { 2, 4, 6, 8, 10 }); aother way of doing things
+            string expectedResult = "1 3 5 7 9";
+            string actualResult = oddNumber.PrintNumbers(oddNumber.GetSequence(5));
+
 
             //assert
             Assert.AreEqual(expectedResult, actualResult);

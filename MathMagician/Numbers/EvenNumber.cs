@@ -1,4 +1,7 @@
-﻿using System;
+﻿//THIS IS THE HARDER WAY TO DO THIS..BUT IT WORKS. THIS STYLE
+//IS NOT USING THE INTERFACE FROM NAT NUM- HENCE WHY YOU ARE REPEATING CODE
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

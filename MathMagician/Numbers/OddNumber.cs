@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    public class Even : NaturalNumber
+    public class OddNumber : NaturalNumber
     {
-        public Even()
+        public OddNumber()
         {
-            First = 2;
             Step = 2;
         }
     }

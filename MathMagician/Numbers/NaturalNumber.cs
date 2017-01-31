@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//YOU ARE NOW USING NAT NUM INTERFACE TO SCALE ALL OF THIS BACK- ITS AWESOME!!!!!!
 namespace MathMagician.Numbers
 {
     public class NaturalNumber : Integer // "public" ='s any code outside the class can access this class
     {
         protected int First { get; set; } // this is an example of a property
-        protected int step { get; set;} // this is an example of a property
+        protected int Step { get; set;} // this is an example of a property
         //protected int current { get; set; } // this is an example of a property
 
 
         public NaturalNumber() //example of a constructor
         {
             First = 1; //this calls the setter
+            Step = 1;
         }
 
         public int GetFirst()
@@ -30,10 +32,10 @@ namespace MathMagician.Numbers
             //'current' argument is read-only
             //given the current number, go to the next number
 
-            return current + 1;
+            return current + Step;
         }
 
-        public int[] GetSequence(int how_many)
+       virtual public int[] GetSequence(int how_many)
         {
             //ex: even sqc {2,4,6,8,10} -- get a sqc to run here
 
