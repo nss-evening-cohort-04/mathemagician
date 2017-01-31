@@ -54,6 +54,17 @@ namespace MathMagician
                     EvenNumber evenNumber = new EvenNumber();
                     Console.WriteLine(evenNumber.printNumbers(evenNumber.GetSequence(howMany)));
                 }
+                else if (commandLower == "odd")
+                {
+                    Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+                    OddNumber oddNumber = new OddNumber();
+                    Console.WriteLine(oddNumber.printNumbers(oddNumber.GetSequence(howMany)));
+                } else if (commandLower == "fibonacci")
+                {
+                    Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+                    FibonacciNumber fiboNumber = new FibonacciNumber();
+                    Console.WriteLine(fiboNumber.printNumbers(fiboNumber.GetSequence(howMany)));
+                }
                 else
                 {
                     Console.WriteLine("Please select a number type from the list provided.");

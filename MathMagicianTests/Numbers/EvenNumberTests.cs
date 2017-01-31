@@ -53,7 +53,7 @@ namespace MathMagicianTests.Numbers
             int[] actualResult = evenNumber.GetSequence(3);
 
             // Assert
-            CollectionAssert.Equals(expectedResult, actualResult);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]

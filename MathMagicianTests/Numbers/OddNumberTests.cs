@@ -53,6 +53,20 @@ namespace MathMagicianTests.Numbers
             int[] actualResult = oddNumber.GetSequence(5);
 
             // Assert
+            CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void CheckOddPrintNumbersMethod()
+        {
+            // Arrange
+            OddNumber oddNumber = new OddNumber();
+
+            // Act
+            string expectedResult = "1 3 5 7 9";
+            string actualResult = oddNumber.printNumbers(oddNumber.GetSequence(5));
+
+            // Assert
             CollectionAssert.Equals(expectedResult, actualResult);
         }
     }

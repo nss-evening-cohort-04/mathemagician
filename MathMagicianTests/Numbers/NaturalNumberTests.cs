@@ -58,7 +58,7 @@ namespace MathMagicianTests.Numbers
             int[] actualResult = naturalNumber.GetSequence(3);
 
             // Assert
-            CollectionAssert.Equals(expectedResult, actualResult);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
 
         }
 

@@ -8,33 +8,12 @@ namespace MathMagician.Numbers
 {
     public class EvenNumber : NaturalNumber
     {
-        private int First { get; set; }
-
         public EvenNumber()
         {
             First = 2;
+            Step = 2;
         }
 
-        public override int GetFirst()
-        {
-            return First;
-        }
-
-        public override int GetNext(int current)
-        {
-            return current + 2;
-        }
-
-        public override int[] GetSequence(int how_many)
-        {
-          
-            var numberArray = new int[how_many];
-            for (int i = 1; i <= how_many; i++)
-            {
-               
-                numberArray[i-1] = i * 2;
-            }
-            return numberArray;
-        }
+       
     }
 }
