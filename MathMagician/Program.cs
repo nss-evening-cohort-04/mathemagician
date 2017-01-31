@@ -10,7 +10,7 @@ namespace MathMagician
     class Program
     {
    
-        static void Main(string[] number_array)
+        static void Main(string[] args)
         {
             Console.WriteLine("What would you like for me to do?");
             Console.WriteLine("I can print the following number types: natural, even, odd, or fibonacci."); //user enters choice.
