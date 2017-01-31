@@ -40,7 +40,6 @@ namespace MathMagician.Numbers
             {
                 result[i] = GetNext(result[i - 1]);
             }
- 
             return result;
         }
 
