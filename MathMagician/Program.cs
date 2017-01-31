@@ -69,7 +69,7 @@ namespace MathMagician
             }
             else if (command == "fibonacci")
             {
-                Console.WriteLine();
+                Console.WriteLine("Well, this is awkward.  I'm not quite ready for public viewing yet.");
             }
 
             Console.WriteLine("Press any key to exit");
