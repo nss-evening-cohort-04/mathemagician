@@ -90,7 +90,7 @@ namespace MathMagician
             }
             else
             {
-                Console.WriteLine("Try again, please choose an option I suggested or I am not going to play this game with you.");
+                Console.WriteLine("Try again, please choose an option I suggested or I'm not going to play this game with you.");
                 goto Start;
             }
         }
