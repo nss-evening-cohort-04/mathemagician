@@ -35,8 +35,8 @@ namespace MathMagicianTests.Numbers
             Fibonacci fibonacci = new Fibonacci();
 
             //Act
-            int expectedResult = 8;
-            int actualResult = fibonacci.GetNext(5);
+            int expectedResult = 13;
+            int actualResult = fibonacci.GetNext(8);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
