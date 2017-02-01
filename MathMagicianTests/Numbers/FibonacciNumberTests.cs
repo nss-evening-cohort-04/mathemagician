@@ -39,7 +39,7 @@ namespace MathMagicianTests.Numbers
             //Act
             int expectedResult = 8;
             //int myNum; this is 0
-            int actualResult = fiboNumber.GetNext(6);
+            int actualResult = fiboNumber.GetNext(5);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -57,7 +57,7 @@ namespace MathMagicianTests.Numbers
 
             //Assert
             Assert.AreEqual(expectedResult.Length, actualResult.Length);
-            Assert.AreEqual(expectedResult, actualResult);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
 
         }
 
