@@ -10,7 +10,6 @@ namespace MathMagician
     class Program
     {
 
-   
         static void Main(string[] args)
         {
             string prompt = ">"; //prompt for user to input choice
@@ -27,9 +26,8 @@ namespace MathMagician
             }
             else
             {
-                Console.WriteLine("I'm sorry, that's not a number type I recognize."); //Displays message to user
-                System.Threading.Thread.Sleep(3000); //Delays application close by 3 seconds so user can see message.  Thank you MSDN.
-                Environment.Exit(0); //Exits application with an exit code of 0(success). Thank you MSDN.
+                Console.WriteLine("I'm sorry, that's not a number type I recognize. Press any key to exit."); //Displays message to user
+                Console.ReadKey();
             }
            
 
@@ -37,9 +35,8 @@ namespace MathMagician
             //converts input to an int
             if (how_many <= 0 || how_many > 30) //evaluates if input is between 1 and 30
             {
-                Console.WriteLine("I'm sorry, I can only print between 1 and 30 numbers."); //Displays message to user
-                System.Threading.Thread.Sleep(3000); //Delays application close so the user can see message. //Thank you MSDN.
-                Environment.Exit(0); //Exits application with an exit code of 0(success).  Thank you MSDN.
+                Console.WriteLine("I'm sorry, I can only print between 1 and 30 numbers. Press any key to exit."); //Displays message to user
+                Console.ReadKey();
                 
             }
            
