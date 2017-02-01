@@ -17,7 +17,7 @@ namespace MathMagician
         Start:
             // Ask the user what kind of number to print
             Console.WriteLine("What kind of numbers should I print for you:");
-            Console.WriteLine("Options: Natural, Prime, Fibonacci, Even or Odd");
+            Console.WriteLine("Options: Natural, Fibonacci, Even or Odd");
 
             // capture their response in a variable
             string command = Console.ReadLine();
@@ -80,12 +80,18 @@ namespace MathMagician
                 Console.WriteLine($"{ command } #s: { finalListOfNumbers }");
                 
                 // program will quit when ...
-                Console.WriteLine("Press any key to quit.");
-                Console.ReadKey();
+                Console.WriteLine("Press q to QUIT or any other key to try again.");
+                var input = Console.ReadKey();
+
+                if (input.KeyChar != 113)
+                {
+                    goto Start;
+                }
             }
             else
             {
                 Console.WriteLine("Try again, please choose an option I suggested or I am not going to play this game with you.");
+                goto Start;
             }
         }
     }

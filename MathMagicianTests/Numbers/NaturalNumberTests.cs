@@ -36,8 +36,8 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
            
             // Act 
-            int expectedResult = 2 + 1;
-            int actualResult = naturalNumber.GetNext(2);
+            int expectedResult = 1 + 1;
+            int actualResult = naturalNumber.GetNext(1);
             
             // Assert
             Assert.AreEqual(expectedResult, actualResult);

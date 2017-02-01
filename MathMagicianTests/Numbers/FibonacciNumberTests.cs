@@ -34,10 +34,10 @@ namespace MathMagicianTests.Numbers
         {
             // Arrange
             EvenNumber fibonacciNumber = new EvenNumber();
-           
+
             // Act 
-            int expectedResult = 2 + 2;
-            int actualResult = fibonacciNumber.GetNext(2);
+            int expectedResult = 1 + 2;
+            int actualResult = fibonacciNumber.GetNext(1);
             
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
